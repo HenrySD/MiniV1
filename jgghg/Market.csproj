@@ -1,4 +1,5 @@
-﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -39,6 +40,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Data.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v18.1.Core, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v18.1.Core, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxThemes.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.Bootstrap.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.Resources.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -59,10 +67,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\bootstrap.css" />
+    <Content Include="css\StyleGerente.css" />
     <Content Include="Font\all.css" />
     <Content Include="Font\webfonts\fa-brands-400.svg" />
     <Content Include="Font\webfonts\fa-regular-400.svg" />
     <Content Include="Font\webfonts\fa-solid-900.svg" />
+    <Content Include="img\bienvenido.png" />
     <Content Include="js\FuncionValidar.js" />
     <Content Include="js\jquery-3.3.1.min.js" />
     <Content Include="Login.aspx" />
@@ -79,6 +89,7 @@
     <Content Include="Font\webfonts\fa-solid-900.ttf" />
     <Content Include="Font\webfonts\fa-solid-900.woff" />
     <Content Include="Font\webfonts\fa-solid-900.woff2" />
+    <Content Include="MasterPages\MasterGerente.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -91,6 +102,7 @@
     <Content Include="css\vendor.css" />
     <Content Include="js\app.js" />
     <Content Include="js\vendor.js" />
+    <Content Include="PagesGerente\HomeGerente.aspx" />
     <Content Include="Pages\AdministradorHome.aspx" />
     <Content Include="Pages\AgregarUsuario.aspx" />
     <Content Include="Web.config" />
@@ -110,6 +122,20 @@
     <Compile Include="MasterPages\Administrador.Master.designer.cs">
       <DependentUpon>Administrador.Master</DependentUpon>
     </Compile>
+    <Compile Include="MasterPages\MasterGerente.Master.cs">
+      <DependentUpon>MasterGerente.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\MasterGerente.Master.designer.cs">
+      <DependentUpon>MasterGerente.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PagesGerente\HomeGerente.aspx.cs">
+      <DependentUpon>HomeGerente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesGerente\HomeGerente.aspx.designer.cs">
+      <DependentUpon>HomeGerente.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\AdministradorHome.aspx.cs">
       <DependentUpon>AdministradorHome.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -126,7 +152,9 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

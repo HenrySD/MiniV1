@@ -1,6 +1,13 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="jgghg.Login" %>
+﻿
 
 <!DOCTYPE html>
+<script runat="server">
+
+    Protected Sub btnAceptar_Click(sender As Object, e As EventArgs)
+
+    End Sub
+</script>
+
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
