@@ -10,7 +10,7 @@
 namespace jgghg.Pages {
     
     
-    public partial class AgregarUsuario {
+    public partial class WebForm1 {
         
         /// <summary>
         /// Control reg_form.

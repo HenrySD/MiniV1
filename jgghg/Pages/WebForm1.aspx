@@ -1,23 +1,51 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/Administrador.Master" AutoEventWireup="true" CodeBehind="AgregarUsuario.aspx.cs" Inherits="jgghg.Pages.AgregarUsuario" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="jgghg.Pages.WebForm1" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-<!--    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
-<script src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>-->
+<%@ Register Assembly="DevExpress.Web.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
 
-   <!-- <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script> 
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
     
-    -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet" />
-    <!--<script src="../js/bootstrapvalidator.min.js"></script>-->
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js' ></script>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script> 
     <script src="../js/jquery.min.js"></script>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    
+    <form class="form-horizontal" runat="server" method="post"  id="reg_form">
+    
+      
+      <!-- Form Name -->
+      <h2> Personal Information </h2>
+    
+      <!-- Text input-->
+      
+      <div class="form-group">
+        <label class="col-md-4 control-label">First Name</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+              <asp:TextBox ID="first_name" runat="server" CssClass="form-control" type="text"></asp:TextBox>
+            
+          </div>
+        </div>
+      </div>
 
-     <!--<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        <div class="form-group">
+        <label class="col-md-4 control-label"></label>
+        <div class="col-md-4">
+            <asp:Button ID="Button1" CssClass="btn btn-warning" runat="server" Text="Button" />
+          
+        </div>
+      </div>
+
+    </form>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
-<script src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>-->
-
+<script src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
     <script type="text/javascript">
  
    $(document).ready(function() {
@@ -167,54 +195,5 @@
 
  
  </script>
-
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-       
-
-   
-    
-    
-   
-    
-
-
-   
-
-    <div style="margin: 10% 0% 10% 0%">
-        <form class="form-horizontal" runat="server" method="post"  id="reg_form">
-    
-      
-      <!-- Form Name -->
-      <h2> Personal Information </h2>
-    
-      <!-- Text input-->
-      
-      <div class="form-group">
-        <label class="col-md-4 control-label">First Name</label>
-        <div class="col-md-6  inputGroupContainer">
-          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-              <asp:TextBox ID="first_name" runat="server" CssClass="form-control" type="text"></asp:TextBox>
-            
-          </div>
-        </div>
-      </div>
-
-        <div class="form-group">
-        <label class="col-md-4 control-label"></label>
-        <div class="col-md-4">
-            <asp:Button ID="Button1" CssClass="btn btn-warning" runat="server" Text="Button" />
-          
-        </div>
-      </div>
-
-    </form>
-
-
-
-
-    </div>
-     
-   
-
-</asp:Content>
+</body>
+</html>
