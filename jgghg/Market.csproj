@@ -104,7 +104,6 @@
     <Content Include="js\vendor.js" />
     <Content Include="PagesGerente\HomeGerente.aspx" />
     <Content Include="Pages\AdministradorHome.aspx" />
-    <Content Include="Pages\AgregarProducto.aspx" />
     <Content Include="Pages\AgregarUsuario.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -143,13 +142,6 @@
     </Compile>
     <Compile Include="Pages\AdministradorHome.aspx.designer.cs">
       <DependentUpon>AdministradorHome.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\AgregarProducto.aspx.cs">
-      <DependentUpon>AgregarProducto.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\AgregarProducto.aspx.designer.cs">
-      <DependentUpon>AgregarProducto.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\AgregarUsuario.aspx.cs">
       <DependentUpon>AgregarUsuario.aspx</DependentUpon>
