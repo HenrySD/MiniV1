@@ -5,9 +5,6 @@
     <link href="../css/bootstrap.css" rel="stylesheet" />
     
     
-  
-
-          
     <div class="container" style="margin:10% 0% 10% 0%">
        <center><h5>Agregar Nuevo Usuario</h5>
            <h6>Datos Nuevo Usuario</h6>
@@ -101,7 +98,7 @@
         <asp:TextBox ID="txtPasaje" runat="server" class="form-control" placeholder="Pasaje" value="" required=""></asp:TextBox>
       
       <div class="invalid-feedback">
-        Campo Vasio
+        Campo Vacio
       </div>
     </div>
     <div class="col-md-4 mb-3">
@@ -109,7 +106,7 @@
         <asp:TextBox ID="txtNumCasa" runat="server" CssClass="form-control" placeholder="Nº Casa" value="" required=""></asp:TextBox>
      
       <div class="invalid-feedback">
-        Campo Vasio
+        Campo Vacio
       </div>
     </div>
 </div>

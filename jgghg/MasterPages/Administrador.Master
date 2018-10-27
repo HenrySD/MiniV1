@@ -169,7 +169,7 @@
                                 </a>
                                 <ul class="sidebar-nav">
                                     <li>
-                                        <a href="#">Ingresar Nuevo Producto </a>
+                                        <a href="../Pages/AgregarProducto.aspx">Ingresar Nuevo Producto </a>
                                     </li>
                                     <li>
                                         <a href="#">Editar Productos </a>

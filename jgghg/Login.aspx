@@ -32,7 +32,7 @@
       </div>
     </div>
     <div class="col-md-7 mb-3">
-      <label for="valida2">Contrasena</label>
+      <label for="valida2">Contraseña</label>
         <asp:TextBox ID="txtContra" runat="server" type="password" CssClass="form-control" placeholder="Ingrese contraseña" value="" required="" onkeypress="return isNumberOrLetter(event)"></asp:TextBox>
      
       <div class="invalid-feedback">
