@@ -1,15 +1,15 @@
-﻿
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Acceder.aspx.cs" Inherits="jgghg.Acceder" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-   
-    <title>LoginMiniMarket</title>
-    <link href="css/bootstrap.css" rel="stylesheet" />
+    <title></title>
 
+    <link href="css/bootstrap.css" rel="stylesheet" />
 </head>
+    
 <body>
      <div style="width:50%; margin:10% 40% 10% 35% ">
     <div class="container">

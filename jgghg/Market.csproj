@@ -66,6 +66,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Acceder.aspx" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\StyleGerente.css" />
     <Content Include="Font\all.css" />
@@ -109,6 +110,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Acceder.aspx.cs">
+      <DependentUpon>Acceder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Acceder.aspx.designer.cs">
+      <DependentUpon>Acceder.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
