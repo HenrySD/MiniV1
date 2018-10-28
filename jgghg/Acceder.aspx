@@ -13,7 +13,7 @@
 <body>
      <div style="width:50%; margin:10% 40% 10% 35% ">
     <div class="container">
-       <h1>Iniciar Session</h1>
+       <h1>Iniciar Sesión</h1>
        <form class="container"  novalidate="" runat="server" id="validar" >
   <div class="row">
     <div class="col-md-7 mb-3">
