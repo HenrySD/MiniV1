@@ -76,7 +76,6 @@
     <Content Include="img\bienvenido.png" />
     <Content Include="js\FuncionValidar.js" />
     <Content Include="js\jquery-3.3.1.min.js" />
-    <Content Include="Login.aspx" />
     <Content Include="MasterPages\Administrador.Master" />
     <Content Include="Font\webfonts\fa-brands-400.eot" />
     <Content Include="Font\webfonts\fa-brands-400.ttf" />
@@ -119,13 +118,6 @@
     </Compile>
     <Content Include="App_Code\Conecxion.cs" />
     <Content Include="App_Code\GestionDatos.cs" />
-    <Compile Include="Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
     <Compile Include="MasterPages\Administrador.Master.cs">
       <DependentUpon>Administrador.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
