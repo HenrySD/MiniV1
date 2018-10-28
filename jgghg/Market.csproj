@@ -118,6 +118,7 @@
       <DependentUpon>Acceder.aspx</DependentUpon>
     </Compile>
     <Content Include="App_Code\Conecxion.cs" />
+    <Content Include="App_Code\GestionDatos.cs" />
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
