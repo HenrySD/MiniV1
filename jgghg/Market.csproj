@@ -116,7 +116,6 @@
     <Compile Include="Acceder.aspx.designer.cs">
       <DependentUpon>Acceder.aspx</DependentUpon>
     </Compile>
-    <Content Include="App_Code\Conecxion.cs" />
     <Content Include="App_Code\GestionDatos.cs" />
     <Compile Include="MasterPages\Administrador.Master.cs">
       <DependentUpon>Administrador.Master</DependentUpon>

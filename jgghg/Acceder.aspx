@@ -17,8 +17,8 @@
        <form class="container"  novalidate="" runat="server" id="validar" >
   <div class="row">
     <div class="col-md-7 mb-3">
-      <label for="valida1">Usuario</label>
-        <asp:TextBox ID="txtUsuario" runat="server" class="form-control" placeholder="Ingrese Usuario" value="" required="" onkeypress="return isNumberOrLetter(event)"></asp:TextBox>
+      <label for="valida1">Usuario</label><asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+&nbsp;<asp:TextBox ID="txtUsuario" runat="server" class="form-control" placeholder="Ingrese Usuario" value="" required="" onkeypress="return isNumberOrLetter(event)"></asp:TextBox>
       
       <div class="invalid-feedback">
         Ingrese Usuario
@@ -35,6 +35,8 @@
   </div>
 
            <asp:Button ID="btnAceptar" runat="server" Text="Ingresar" CssClass="btn btn-primary" type="submit" OnClick="btnAceptar_Click" />
+    
+           <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DB_A41A57_HenrySDConnectionString %>" SelectCommand="SELECT Username, Pass,CargoID FROM Usuarios"></asp:SqlDataSource>
     
       </form>
        

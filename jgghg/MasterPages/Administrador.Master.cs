@@ -11,7 +11,7 @@ namespace jgghg.MasterPages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Label1.Text = Session["Usuario"].ToString();
         }
     }
 }
