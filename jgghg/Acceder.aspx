@@ -17,8 +17,7 @@
        <form class="container"  novalidate="" runat="server" id="validar" >
   <div class="row">
     <div class="col-md-7 mb-3">
-      <label for="valida1">Usuario</label><asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-&nbsp;<asp:TextBox ID="txtUsuario" runat="server" class="form-control" placeholder="Ingrese Usuario" value="" required="" onkeypress="return isNumberOrLetter(event)"></asp:TextBox>
+      <label for="valida1">Usuario</label>&nbsp;<asp:TextBox ID="txtUsuario" runat="server" class="form-control" placeholder="Ingrese Usuario" value="" required="" onkeypress="return isNumberOrLetter(event)"></asp:TextBox>
       
       <div class="invalid-feedback">
         Ingrese Usuario

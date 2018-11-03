@@ -32,35 +32,40 @@ namespace jgghg
             DataView dv = (DataView)SqlDataSource1.Select(DataSourceSelectArguments.Empty);
             DataTable dt = dv.ToTable();
 
-            
-                if (dt.Rows.Count != 0)
-                {
+
+            if (dt.Rows.Count != 0)
+            {
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    //aca haces las operaciones con cada fila de la tabla ej:
-                    //Session["User"] = dt.Rows[i][0].ToString().Trim();
-                  
                     if (dt.Rows[i][0].ToString().Trim() == txtUsuario.Text && dt.Rows[i][1].ToString().Trim() == txtContra.Text)
                     {
                         if (dt.Rows[i][2].ToString() == "1")
                         {
-                             Session["Usuario"]= txtUsuario.Text;
+                            Session["Usuario"] = txtUsuario.Text;
                             Response.Redirect("Pages/AdministradorHome.aspx");
                         }
-                       else if (dt.Rows[i][2].ToString() == "2")
+                        else if (dt.Rows[i][2].ToString() == "2")
                         {
-                             Response.Redirect("PagesGerente/HomeGerente.aspx");
+                            Response.Redirect("PagesGerente/HomeGerente.aspx");
 
                         }
                         else if (dt.Rows[i][2].ToString() == "3")
                         {
-                   
+
                         }
                     }
-                   
-     
+
+
                 }
             }
+            else {
+
+                Response.Write("<script>alert('Hello!I am an alert box!!');</script>");
+
+
+            }
+
         }
-    }
+
+}
 }
