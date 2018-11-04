@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Administrador.master.cs" Inherits="jgghg.MasterPages.Administrador" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Root.Master.cs" Inherits="jgghg.MasterPages.Administrador" %>
 
 <!DOCTYPE html>
 
@@ -85,7 +85,7 @@
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                                 <div class="img" style=""></div>
                                 <span class="name">
-                                    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label> </span>
+                                    <asp:Label ID="Usuario" runat="server" ></asp:Label> </span>
                             </a>
                             <div class="dropdown-menu profile-dropdown-menu" aria-labelledby="dropdownMenu1">
                                 <a class="dropdown-item" href="#">
@@ -95,8 +95,8 @@
                                 <a class="dropdown-item" href="#">
                                     <i class="fa fa-gear icon"></i>Settings </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="login.html">
-                                    <i class="fa fa-power-off icon"></i>Logout </a>
+                                <a class="dropdown-item" href="../Autenticar/Salir.aspx">
+                                    <i class="fa fa-power-off icon"></i>Salir </a>
                             </div>
                         </li>
                     </ul>
@@ -133,19 +133,19 @@
                                         <a href="#">Reportes de Ventas </a>
                                     </li>
                                     <li>
-                                        <a href="item-editor.html">Compras Productos </a>
+                                        <a href="#">Compras Productos </a>
                                     </li>
                                     <li>
-                                        <a href="items-list.html">Ganancias </a>
+                                        <a href="#">Ganancias </a>
                                     </li>
                                     <li>
-                                        <a href="item-editor.html">Usuarios Activos </a>
+                                        <a href="#">Usuarios Activos </a>
                                     </li>
                                     <li>
-                                        <a href="items-list.html">Productos Proximos a Vencer </a>
+                                        <a href="#">Productos Proximos a Vencer </a>
                                     </li>
                                     <li>
-                                        <a href="item-editor.html">Productos Vencidos </a>
+                                        <a href="#">Productos Vencidos </a>
                                     </li>
                                 </ul>
                             </li>
@@ -156,7 +156,7 @@
                                 </a>
                                 <ul class="sidebar-nav">
                                     <li>
-                                        <a href="../Pages/AgregarUsuario.aspx">Registrar Nuevo Usuario </a>
+                                        <a href="../PagesRoot/AgregarUsuario.aspx">Registrar Nuevo Usuario </a>
                                     </li>
                                     <li>
                                         <a href="#">Recuperar Contraseña </a>
@@ -170,7 +170,7 @@
                                 </a>
                                 <ul class="sidebar-nav">
                                     <li>
-                                        <a href="../Pages/AgregarProducto.aspx">Ingresar Nuevo Producto </a>
+                                        <a href="../PagesRoot/AgregarProducto.aspx">Ingresar Nuevo Producto </a>
                                     </li>
                                     <li>
                                         <a href="#">Editar Productos </a>

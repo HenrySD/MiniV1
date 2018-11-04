@@ -5,13 +5,17 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace jgghg.PagesGerente
+namespace jgghg.PagesAdmin
 {
-    public partial class HomeGerente : System.Web.UI.Page
+    public partial class AdminHome : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["aux"] == null)
+            {
+                Response.Redirect("../Acceder.aspx");
 
+            }
         }
     }
 }

@@ -7,5 +7,6 @@ namespace jgghg.App_Code
 {
     public class GestionDatos
     {
+        
     }
 }

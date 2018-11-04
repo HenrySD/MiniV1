@@ -7,11 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace jgghg.MasterPages
 {
-    public partial class Administrador : System.Web.UI.MasterPage
+    public partial class Admin : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           // Label1.Text = Session["Usuario"].ToString();
+            Usuario.Text = Session["aux"].ToString();
         }
     }
 }

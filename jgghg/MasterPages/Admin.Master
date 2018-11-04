@@ -1,23 +1,19 @@
-﻿<%--<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Administrador.master.cs" Inherits="jgghg.MasterPages.Administrador" %>--%>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="jgghg.MasterPages.Admin" %>
 
 <!DOCTYPE html>
 
 <html>
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <link href="../css/vendor.css" rel="stylesheet" />
-    <link href="../css/StyleGerente.css" rel="stylesheet" />
+    <link href="../css/app.css" rel="stylesheet" />
     <link href="../Font/all.css" rel="stylesheet" />
-
-    
-
 </head>
 <body>
-     <div class="main-wrapper">
+   <div class="main-wrapper">
         <div class="app" id="app">
             <header class="header" style="position:fixed">
                 <div class="header-block header-block-collapse d-lg-none d-xl-none">
@@ -86,25 +82,26 @@
                         <li class="profile dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                                 <div class="img" style=""></div>
-                                <span class="name">Henry Lopez </span>
+                                <span class="name">
+                                    <asp:Label ID="Usuario" runat="server" ></asp:Label> </span>
                             </a>
                             <div class="dropdown-menu profile-dropdown-menu" aria-labelledby="dropdownMenu1">
                                 <a class="dropdown-item" href="#">
-                                    <i class="fa fa-user icon"></i>Profile </a>
+                                    <i class="fa fa-user icon"></i> Perfil </a>
                                 <a class="dropdown-item" href="#">
-                                    <i class="fa fa-bell icon "></i>Notifications </a>
+                                    <i class="fa fa-bell icon"></i> Notificaciones </a>
                                 <a class="dropdown-item" href="#">
-                                    <i class="fa fa-gear icon"></i>Settings </a>
+                                    <i class="fa fa-gear icon"></i> Ajustes </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="login.html">
-                                    <i class="fa fa-power-off icon"></i>Logout </a>
+                                <a class="dropdown-item" href="../Autenticar/Salir.aspx">
+                                    <i class="fa fa-power-off icon"></i>Salir </a>
                             </div>
                         </li>
                     </ul>
                 </div>
                 
             </header>
-            <aside class="sidebar" style="position:fixed">
+            <aside  class="sidebar" style="position:fixed; background-color:darkblue;" >
                 <div class="sidebar-container">
                     <div class="sidebar-header">
                         <div class="brand">
@@ -118,75 +115,101 @@
                             Tiendita
                         </div>
                     </div>
-                    <nav class="menu bg-info">
+                    <nav class="menu">
                         <ul class="sidebar-menu metismenu" id="sidebar-menu">
                             <li class="active">
-                                <a href="#" class="alert-dark">
-                                     <i class="fa fa-home text-dark"> Inicio </i> </a>
+                                <a href="#">
+                                    <i class="fa fa-home"></i>Inicio </a>
                             </li>
                             <li>
-                                <a href="#" class="text-dark">
-                                    <i class="fa fa-th-large " ></i>Consultas
+                                <a href="#">
+                                    <i class="fa fa-th-large"></i>Consultas
                                         <i class="fa arrow"></i>
                                 </a>
                                 <ul class="sidebar-nav">
-                                    <li >
-                                        <a href="#" class=" text-success">Reportes de Ventas </a>
+                                    <li>
+                                        <a href="#">Reportes de Ventas </a>
                                     </li>
                                     <li>
-                                        <a href="item-editor.html"class=" text-success">Compras Productos </a>
-                                    </li>
-                                    
-                                    <li>
-                                        <a href="item-editor.html" class=" text-success">Usuarios Activos </a>
+                                        <a href="#">Compras Productos </a>
                                     </li>
                                     <li>
-                                        <a href="items-list.html" class=" text-success">Productos Proximos a Vencer </a>
+                                        <a href="#">Ganancias </a>
                                     </li>
                                     <li>
-                                        <a href="item-editor.html" class=" text-success">Productos Vencidos </a>
+                                        <a href="#">Usuarios Activos </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Productos Proximos a Vencer </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Productos Vencidos </a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="#" class="text-dark">
+                                <a href="#">
                                     <i class="fa fa-area-chart"></i>Usuarios
                                         <i class="fa arrow"></i>
                                 </a>
                                 <ul class="sidebar-nav">
                                     <li>
-                                        <a href="#" class=" text-success">Recuperar Contraseña </a>
+                                        <a href="../Pages/AgregarUsuario.aspx">Registrar Nuevo Usuario </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Recuperar Contraseña </a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="#" class="text-dark">
+                                <a href="#">
                                     <i class="fa fa-table"></i>Productos
                                         <i class="fa arrow"></i>
                                 </a>
                                 <ul class="sidebar-nav">
-                                    
                                     <li>
-                                        <a href="#" class=" text-success">Editar Productos </a>
+                                        <a href="../Pages/AgregarProducto.aspx">Ingresar Nuevo Producto </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Editar Productos </a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="#"class="text-dark">
+                                <a href="#">
                                     <i class="fa fa-desktop"></i>Ventas
                                         <i class="fa arrow"></i>
                                 </a>
                                 <ul class="sidebar-nav">
                                     <li>
-                                        <a href="#" class=" text-success">Control Diario de Ventas </a>
+                                        <a href="#">Control Diario de Ventas </a>
                                     </li>
                                     <li>
-                                        <a href="#" class=" text-success">Control de Ventas </a>
+                                        <a href="#">Control de Ventas </a>
                                     </li>
                                    
                                 </ul>
                             </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-file-text-o"></i>Proveedores
+                                        <i class="fa arrow"></i>
+                                </a>
+                                <ul class="sidebar-nav">
+                                    <li>
+                                        <a href="#">Listado Proveedores </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Editar Proveedor </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Agregar Proveedores </a>
+                                    </li>
+                                    
+                                </ul>
+                            </li>
                             
+                        </ul>
                     </nav>
                 </div>
 
@@ -198,6 +221,7 @@
             <div class="container">
                     <div>
                         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
                         </asp:ContentPlaceHolder>
                     </div>
                 
@@ -210,10 +234,10 @@
                 <div class="footer-block author">
                     <ul>
                         <li>created by
-                                <a href="https://github.com/modularcode">ModularCode</a>
+                                <a href="#">Ingeniera En Sistemas</a>
                         </li>
                         <li>
-                            <a href="https://github.com/modularcode/modular-admin-html#get-in-touch">get in touch</a>
+                            <a href="#">otro</a>
                         </li>
                     </ul>
                 </div>

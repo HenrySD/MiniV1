@@ -20,8 +20,8 @@ namespace jgghg
 
 
         protected void Page_Load(object sender, EventArgs e)
-        {
-
+        {// x intentos para acceder a la app sin loguearse la variable aux siempre sera null al momento de cargar de nuevo acceder.aspx
+            Session["aux"] = null;
         }
 
         protected void btnAceptar_Click(object sender, EventArgs e)
@@ -41,18 +41,21 @@ namespace jgghg
                     {
                         if (dt.Rows[i][2].ToString() == "1")
                         {
-                            Session["Usuario"] = txtUsuario.Text;
-                            Response.Redirect("Pages/AdministradorHome.aspx");
+                            Session["aux"] = txtUsuario.Text;
+                            Response.Redirect("PagesRoot/RootHome.aspx");
                         }
                         else if (dt.Rows[i][2].ToString() == "2")
                         {
-                            Response.Redirect("PagesGerente/HomeGerente.aspx");
+                            Session["aux"] = txtUsuario.Text;
+                            Response.Redirect("PagesAdmin/AdminHome.aspx");
 
                         }
                         else if (dt.Rows[i][2].ToString() == "3")
                         {
-
+                            Session["aux"] = txtUsuario.Text;
                         }
+
+                        
                     }
 
 

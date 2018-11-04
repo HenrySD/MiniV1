@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/Administrador.Master" AutoEventWireup="true" CodeBehind="AgregarUsuario.aspx.cs" Inherits="jgghg.Pages.AgregarUsuario" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/Root.Master" AutoEventWireup="true" CodeBehind="AgregarUsuario.aspx.cs" Inherits="jgghg.Pages.AgregarUsuario" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
@@ -70,6 +70,13 @@
                     <div class="invalid-feedback">
                         No Coinciden las Contraseñas
                     </div>
+                </div>
+            </div>
+            <div class="row" style="position:center">
+                <div class="col-md-4 mb-3">
+                    <asp:Label ID="Label1" runat="server" Text="Tipo de Usuario"></asp:Label>
+                    <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="TipoCargo" DataValueField="TipoCargo" CssClass="form-control"></asp:DropDownList>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString='<%$ ConnectionStrings:DB_A41A57_HenrySDConnectionString %>' SelectCommand="SELECT [TipoCargo] FROM [Cargos]" ></asp:SqlDataSource>
                 </div>
             </div>
 

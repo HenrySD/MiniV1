@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Acceder.aspx" />
+    <Content Include="Autenticar\Salir.aspx" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\StyleGerente.css" />
     <Content Include="Font\all.css" />
@@ -76,7 +77,7 @@
     <Content Include="img\bienvenido.png" />
     <Content Include="js\FuncionValidar.js" />
     <Content Include="js\jquery-3.3.1.min.js" />
-    <Content Include="MasterPages\Administrador.Master" />
+    <Content Include="MasterPages\Root.Master" />
     <Content Include="Font\webfonts\fa-brands-400.eot" />
     <Content Include="Font\webfonts\fa-brands-400.ttf" />
     <Content Include="Font\webfonts\fa-brands-400.woff" />
@@ -89,7 +90,7 @@
     <Content Include="Font\webfonts\fa-solid-900.ttf" />
     <Content Include="Font\webfonts\fa-solid-900.woff" />
     <Content Include="Font\webfonts\fa-solid-900.woff2" />
-    <Content Include="MasterPages\MasterGerente.Master" />
+    <Content Include="MasterPages\Admin.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -102,10 +103,10 @@
     <Content Include="css\vendor.css" />
     <Content Include="js\app.js" />
     <Content Include="js\vendor.js" />
-    <Content Include="PagesGerente\HomeGerente.aspx" />
-    <Content Include="Pages\AdministradorHome.aspx" />
-    <Content Include="Pages\AgregarProducto.aspx" />
-    <Content Include="Pages\AgregarUsuario.aspx" />
+    <Content Include="PagesAdmin\AdminHome.aspx" />
+    <Content Include="PagesRoot\RootHome.aspx" />
+    <Content Include="PagesRoot\AgregarProducto.aspx" />
+    <Content Include="PagesRoot\AgregarUsuario.aspx" />
     <Content Include="Prueba.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -117,6 +118,27 @@
     <Compile Include="Acceder.aspx.designer.cs">
       <DependentUpon>Acceder.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Autenticar\Salir.aspx.cs">
+      <DependentUpon>Salir.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Autenticar\Salir.aspx.designer.cs">
+      <DependentUpon>Salir.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PagesAdmin\AdminHome.aspx.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesAdmin\AdminHome.aspx.designer.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Prueba.aspx.cs">
       <DependentUpon>Prueba.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -125,46 +147,32 @@
       <DependentUpon>Prueba.aspx</DependentUpon>
     </Compile>
     <Content Include="App_Code\GestionDatos.cs" />
-    <Compile Include="MasterPages\Administrador.Master.cs">
-      <DependentUpon>Administrador.Master</DependentUpon>
+    <Compile Include="MasterPages\Root.Master.cs">
+      <DependentUpon>Root.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MasterPages\Administrador.Master.designer.cs">
-      <DependentUpon>Administrador.Master</DependentUpon>
+    <Compile Include="MasterPages\Root.Master.designer.cs">
+      <DependentUpon>Root.Master</DependentUpon>
     </Compile>
-    <Compile Include="MasterPages\MasterGerente.Master.cs">
-      <DependentUpon>MasterGerente.Master</DependentUpon>
+    <Compile Include="PagesRoot\RootHome.aspx.cs">
+      <DependentUpon>RootHome.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MasterPages\MasterGerente.Master.designer.cs">
-      <DependentUpon>MasterGerente.Master</DependentUpon>
+    <Compile Include="PagesRoot\RootHome.aspx.designer.cs">
+      <DependentUpon>RootHome.aspx</DependentUpon>
     </Compile>
-    <Compile Include="PagesGerente\HomeGerente.aspx.cs">
-      <DependentUpon>HomeGerente.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PagesGerente\HomeGerente.aspx.designer.cs">
-      <DependentUpon>HomeGerente.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\AdministradorHome.aspx.cs">
-      <DependentUpon>AdministradorHome.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\AdministradorHome.aspx.designer.cs">
-      <DependentUpon>AdministradorHome.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\AgregarProducto.aspx.cs">
+    <Compile Include="PagesRoot\AgregarProducto.aspx.cs">
       <DependentUpon>AgregarProducto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\AgregarProducto.aspx.designer.cs">
+    <Compile Include="PagesRoot\AgregarProducto.aspx.designer.cs">
       <DependentUpon>AgregarProducto.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\AgregarUsuario.aspx.cs">
+    <Compile Include="PagesRoot\AgregarUsuario.aspx.cs">
       <DependentUpon>AgregarUsuario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\AgregarUsuario.aspx.designer.cs">
+    <Compile Include="PagesRoot\AgregarUsuario.aspx.designer.cs">
       <DependentUpon>AgregarUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

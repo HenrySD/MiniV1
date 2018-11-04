@@ -7,9 +7,9 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace jgghg.Pages {
+namespace jgghg.PagesAdmin {
     
     
-    public partial class AdministradorHome {
+    public partial class AdminHome {
     }
 }

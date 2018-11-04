@@ -7,9 +7,9 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace jgghg.PagesGerente {
+namespace jgghg.Pages {
     
     
-    public partial class HomeGerente {
+    public partial class RootHome {
     }
 }
