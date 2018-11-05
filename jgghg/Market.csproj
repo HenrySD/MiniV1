@@ -107,8 +107,8 @@
     <Content Include="PagesRoot\RootHome.aspx" />
     <Content Include="PagesRoot\AgregarProducto.aspx" />
     <Content Include="PagesRoot\AgregarUsuario.aspx" />
+    <Content Include="PagesRoot\TodosLosProductos.aspx" />
     <Content Include="PagesRoot\TodosUsuarios.aspx" />
-    <Content Include="Prueba.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -140,19 +140,19 @@
     <Compile Include="PagesAdmin\AdminHome.aspx.designer.cs">
       <DependentUpon>AdminHome.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PagesRoot\TodosLosProductos.aspx.cs">
+      <DependentUpon>TodosLosProductos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesRoot\TodosLosProductos.aspx.designer.cs">
+      <DependentUpon>TodosLosProductos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PagesRoot\TodosUsuarios.aspx.cs">
       <DependentUpon>TodosUsuarios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="PagesRoot\TodosUsuarios.aspx.designer.cs">
       <DependentUpon>TodosUsuarios.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Prueba.aspx.cs">
-      <DependentUpon>Prueba.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Prueba.aspx.designer.cs">
-      <DependentUpon>Prueba.aspx</DependentUpon>
     </Compile>
     <Content Include="App_Code\GestionDatos.cs" />
     <Compile Include="MasterPages\Root.Master.cs">
