@@ -6,7 +6,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div style="margin:10% 0% 10% 0%">  
     <form  method="post" runat="server">
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString='<%$ ConnectionStrings:DB_A41A57_HenrySDConnectionString %>' SelectCommand="SELECT [UserName], [Nombre], [Apellido], [Correo], [CargoID] as 'Cargo', [Calle], [Barrio], [Pasaje], [NumCasa], [Municipio], [Departamento] FROM [Usuarios]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString='<%$ ConnectionStrings:DB_A41A57_HenrySDConnectionString %>' SelectCommand="SELECT Usuarios.UserName, Usuarios.Nombre, Usuarios.Apellido, Usuarios.Correo, Cargos.TipoCargo AS 'Cargo', Usuarios.Calle, Usuarios.Barrio, Usuarios.Pasaje, Usuarios.NumCasa as '#Casa', Usuarios.Municipio, Usuarios.Departamento FROM Usuarios INNER JOIN Cargos ON Usuarios.CargoID = Cargos.CargoID"></asp:SqlDataSource>
         <dx:ASPxGridView ID="ASPxGridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Theme="MaterialCompact" EnableTheming="True">
 
             <SettingsDataSecurity AllowEdit="False" AllowInsert="False" AllowDelete="False"></SettingsDataSecurity>
@@ -22,10 +22,10 @@
                 <dx:GridViewDataTextColumn FieldName="Barrio" VisibleIndex="6">
                 </dx:GridViewDataTextColumn>
                 <dx:GridViewDataTextColumn FieldName="Pasaje" VisibleIndex="7"></dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="NumCasa" VisibleIndex="8"></dx:GridViewDataTextColumn>
+                <dx:GridViewDataTextColumn FieldName="#Casa" VisibleIndex="8"></dx:GridViewDataTextColumn>
                 <dx:GridViewDataTextColumn FieldName="Municipio" VisibleIndex="9"></dx:GridViewDataTextColumn>
                 <dx:GridViewDataTextColumn FieldName="Departamento" VisibleIndex="10"></dx:GridViewDataTextColumn>
-        </Columns>
+            </Columns>
     </dx:ASPxGridView>
         </form>
          </div>

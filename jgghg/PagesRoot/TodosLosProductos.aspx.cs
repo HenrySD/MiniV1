@@ -11,7 +11,11 @@ namespace jgghg.PagesRoot
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["aux"] == null)
+            {
+                Response.Redirect("../Acceder.aspx");
+                Response.End();
+            }
         }
     }
 }

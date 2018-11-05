@@ -75,8 +75,8 @@
             <div class="row">
                 <div class="col-md-4 mb-3">
                     <asp:Label ID="Label1" runat="server" Text="Tipo de Usuario"></asp:Label>
-                    <asp:DropDownList ID="txtCargo" runat="server" DataSourceID="SqlDataSource1" DataTextField="TipoCargo" DataValueField="TipoCargo" CssClass="form-control"></asp:DropDownList>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString='<%$ ConnectionStrings:DB_A41A57_HenrySDConnectionString %>' SelectCommand="SELECT [TipoCargo] FROM [Cargos]"></asp:SqlDataSource>
+                    <asp:DropDownList ID="txtCargo" runat="server" DataSourceID="SqlDataSource1" DataTextField="TipoCargo" DataValueField="CargoID" CssClass="form-control"></asp:DropDownList>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString='<%$ ConnectionStrings:DB_A41A57_HenrySDConnectionString %>' SelectCommand="SELECT [CargoID], [TipoCargo] FROM [Cargos]"></asp:SqlDataSource>
                 </div>
                 
             </div>
