@@ -14,7 +14,7 @@
     <div class="container" style="margin: 10% 0% 10% 0%">
         <h5 style="text-align:center">Agregar Nuevo Usuario</h5>
            <h6 style="text-align:center">Datos Nuevo Usuario</h6>
-       
+        <asp:SqlDataSource ID="SqlDataSource2" runat="server"></asp:SqlDataSource>
         <form class="container" novalidate="" runat="server" id="validar">
             <div class="row">
                 <div class="col-md-4 mb-3">
@@ -50,7 +50,7 @@
             </div>
             <div class="row">
                 <div class="col-md-4 mb-3">
-                    &nbsp;<asp:TextBox ID="txtUsuario" runat="server" class="form-control" placeholder="Ingrese Usuario" value="" required=""></asp:TextBox>
+                    &nbsp;<asp:TextBox ID="txtUserName" runat="server" class="form-control" placeholder="Ingrese Usuario" value="" required=""></asp:TextBox>
 
                     <div class="invalid-feedback">
                         Agregar Usuario
@@ -64,34 +64,35 @@
                     </div>
                 </div>
                 <div class="col-md-4 mb-3">
-                    &nbsp;<asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txtPass" ControlToValidate="TextBox3" CssClass="auto-style1" ErrorMessage="Las conraseñas no coinciden"></asp:CompareValidator>
-                    <asp:TextBox ID="TextBox3" runat="server" type="password" CssClass="form-control" placeholder="Repita Contraseña" value="" required=""></asp:TextBox>
+                    &nbsp;<asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txtPass" ControlToValidate="txtPassRe" CssClass="auto-style1" ErrorMessage="Las conraseñas no coinciden"></asp:CompareValidator>
+                    <asp:TextBox ID="txtPassRe" runat="server" type="password" CssClass="form-control" placeholder="Repita Contraseña" value="" required=""></asp:TextBox>
 
                     <div class="invalid-feedback">
                         No Coinciden las Contraseñas
                     </div>
                 </div>
             </div>
-            <div class="row" style="position:center">
+            <div class="row">
                 <div class="col-md-4 mb-3">
                     <asp:Label ID="Label1" runat="server" Text="Tipo de Usuario"></asp:Label>
-                    <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="TipoCargo" DataValueField="TipoCargo" CssClass="form-control"></asp:DropDownList>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString='<%$ ConnectionStrings:DB_A41A57_HenrySDConnectionString %>' SelectCommand="SELECT [TipoCargo] FROM [Cargos]" ></asp:SqlDataSource>
+                    <asp:DropDownList ID="txtCargo" runat="server" DataSourceID="SqlDataSource1" DataTextField="TipoCargo" DataValueField="TipoCargo" CssClass="form-control"></asp:DropDownList>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString='<%$ ConnectionStrings:DB_A41A57_HenrySDConnectionString %>' SelectCommand="SELECT [TipoCargo] FROM [Cargos]"></asp:SqlDataSource>
                 </div>
+                
             </div>
 
             <%--parte de dirrecciones --%>
             <h6 style="text-align:center">Dirrección</h6>
             <div class="row">
     <div class="col-md-4 mb-3">
-        &nbsp;<asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" placeholder="Departamento" value="" required=""></asp:TextBox>
+        &nbsp;<asp:TextBox ID="txtDepartamento" runat="server" CssClass="form-control" placeholder="Departamento" value="" required=""></asp:TextBox>
         <div class="invalid-feedback">
                     Ingrese Departamento
                 </div>
         
     </div>
     <div class="col-md-4 mb-3">
-        &nbsp;<asp:TextBox ID="TextBox2" runat="server" CssClass="form-control" placeholder="Municipio" value="" required=""></asp:TextBox>
+        &nbsp;<asp:TextBox ID="txtMunicipio" runat="server" CssClass="form-control" placeholder="Municipio" value="" required=""></asp:TextBox>
         <div class="invalid-feedback">
                     Ingrese Municipio
                 </div>
@@ -115,7 +116,7 @@
                 </div>
             </div>
             <div class="col-md-4 mb-3">
-                &nbsp;<asp:TextBox ID="TextBox4" runat="server" class="form-control" placeholder="Pasaje" value=""></asp:TextBox>
+                &nbsp;<asp:TextBox ID="txtPasaje" runat="server" class="form-control" placeholder="Pasaje" value=""></asp:TextBox>
 
                 
             </div>

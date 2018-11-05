@@ -58,7 +58,7 @@
                 
            <asp:Button ID="btnAceptar" runat="server" Text="Ingresar" CssClass="btn btn-primary" type="submit" OnClick="btnAceptar_Click" />
     
-           <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DB_A41A57_HenrySDConnectionString %>" SelectCommand="SELECT Username, Pass,CargoID FROM Usuarios"></asp:SqlDataSource>
+           <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DB_A41A57_HenrySDConnectionString %>" SelectCommand="SELECT [UserName], [Pass], [CargoID] FROM [Usuarios]"></asp:SqlDataSource>
    
            </div>
       </form>
