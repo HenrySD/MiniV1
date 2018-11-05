@@ -18,7 +18,7 @@
         <form class="container" novalidate="" runat="server" id="validar">
             <div class="row">
                 <div class="col-md-4 mb-3">
-
+                    
                     <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" ControlToValidate="txtNombre" CssClass="auto-style2" ErrorMessage="Ingrese solo letras" ValidationExpression="^[a-zA-Z]+$" Style="color: #FF0000"></asp:RegularExpressionValidator>
 
                     &nbsp;<asp:TextBox ID="txtNombre" runat="server" class="form-control" placeholder="Ingrese Nombre" value="" required=""></asp:TextBox>

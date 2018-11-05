@@ -107,6 +107,7 @@
     <Content Include="PagesRoot\RootHome.aspx" />
     <Content Include="PagesRoot\AgregarProducto.aspx" />
     <Content Include="PagesRoot\AgregarUsuario.aspx" />
+    <Content Include="PagesRoot\TodosUsuarios.aspx" />
     <Content Include="Prueba.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -138,6 +139,13 @@
     </Compile>
     <Compile Include="PagesAdmin\AdminHome.aspx.designer.cs">
       <DependentUpon>AdminHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesRoot\TodosUsuarios.aspx.cs">
+      <DependentUpon>TodosUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesRoot\TodosUsuarios.aspx.designer.cs">
+      <DependentUpon>TodosUsuarios.aspx</DependentUpon>
     </Compile>
     <Compile Include="Prueba.aspx.cs">
       <DependentUpon>Prueba.aspx</DependentUpon>

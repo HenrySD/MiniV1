@@ -57,16 +57,23 @@ namespace jgghg
 
                         
                     }
+                    else
+                    {
+                        
+            
+                            Error.Text = "Ingrese Datos Corectos";
+                        // alertas pero salen en 3 veses no funionan con el .trim()
+                        //Response.Write("<script>alert('Ingrese otro');</script>");
+
+                        
+                    }
 
 
                 }
             }
-            else {
-
-                Response.Write("<script>alert('Hello!I am an alert box!!');</script>");
-
-
-            }
+            
+            
+           
 
         }
 
