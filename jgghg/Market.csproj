@@ -91,6 +91,7 @@
     <Content Include="Font\webfonts\fa-solid-900.woff" />
     <Content Include="Font\webfonts\fa-solid-900.woff2" />
     <Content Include="MasterPages\Admin.Master" />
+    <Content Include="MasterPages\Empleado.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -104,6 +105,7 @@
     <Content Include="js\app.js" />
     <Content Include="js\vendor.js" />
     <Content Include="PagesAdmin\AdminHome.aspx" />
+    <Content Include="PagesEmpleado\EmpleadoHome.aspx" />
     <Content Include="PagesRoot\RootHome.aspx" />
     <Content Include="PagesRoot\AgregarProducto.aspx" />
     <Content Include="PagesRoot\AgregarUsuario.aspx" />
@@ -133,12 +135,26 @@
     <Compile Include="MasterPages\Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
     </Compile>
+    <Compile Include="MasterPages\Empleado.Master.cs">
+      <DependentUpon>Empleado.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\Empleado.Master.designer.cs">
+      <DependentUpon>Empleado.Master</DependentUpon>
+    </Compile>
     <Compile Include="PagesAdmin\AdminHome.aspx.cs">
       <DependentUpon>AdminHome.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="PagesAdmin\AdminHome.aspx.designer.cs">
       <DependentUpon>AdminHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesEmpleado\EmpleadoHome.aspx.cs">
+      <DependentUpon>EmpleadoHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesEmpleado\EmpleadoHome.aspx.designer.cs">
+      <DependentUpon>EmpleadoHome.aspx</DependentUpon>
     </Compile>
     <Compile Include="PagesRoot\TodosLosProductos.aspx.cs">
       <DependentUpon>TodosLosProductos.aspx</DependentUpon>
