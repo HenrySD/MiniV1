@@ -53,6 +53,7 @@ namespace jgghg
                         else if (dt.Rows[i][2].ToString() == "3")
                         {
                             Session["aux"] = txtUsuario.Text;
+                            Response.Redirect("PagesEmpleado/EmpleadoHome.aspx");
                         }
 
                         
