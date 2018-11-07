@@ -13,6 +13,24 @@ namespace jgghg.Pages {
     public partial class AgregarProducto {
         
         /// <summary>
+        /// Control SourceCategorias.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SourceCategorias;
+        
+        /// <summary>
+        /// Control SourceProveedor.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SourceProveedor;
+        
+        /// <summary>
         /// Control validar.
         /// </summary>
         /// <remarks>
@@ -40,6 +58,15 @@ namespace jgghg.Pages {
         protected global::System.Web.UI.WebControls.TextBox txtNombreProducto;
         
         /// <summary>
+        /// Control Label2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label2;
+        
+        /// <summary>
         /// Control RegularExpressionValidator2.
         /// </summary>
         /// <remarks>
@@ -49,13 +76,13 @@ namespace jgghg.Pages {
         protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator2;
         
         /// <summary>
-        /// Control txtCategoria.
+        /// Control Categoriatxt.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCategoria;
+        protected global::System.Web.UI.WebControls.DropDownList Categoriatxt;
         
         /// <summary>
         /// Control RegularExpressionValidator7.
@@ -103,6 +130,15 @@ namespace jgghg.Pages {
         protected global::System.Web.UI.WebControls.TextBox TextExistencia;
         
         /// <summary>
+        /// Control Label1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
+        
+        /// <summary>
         /// Control RegularExpressionValidator3.
         /// </summary>
         /// <remarks>
@@ -112,13 +148,13 @@ namespace jgghg.Pages {
         protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator3;
         
         /// <summary>
-        /// Control TextProveedor.
+        /// Control Proveedortxt.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextProveedor;
+        protected global::System.Web.UI.WebControls.DropDownList Proveedortxt;
         
         /// <summary>
         /// Control RegularExpressionValidator4.

@@ -1,15 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.Data.SqlClient;
+
+
+
+
 
 namespace jgghg.Pages
 {
     public partial class AgregarUsuario : System.Web.UI.Page
     {
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["aux"] == null)
@@ -18,7 +18,8 @@ namespace jgghg.Pages
                 Response.End();
             }
         }
-
+        //ConexionSD sd = new ConexionSD();
+        
         SqlConnection con = new SqlConnection("Data Source=sql7004.site4now.net;Initial Catalog=DB_A41A57_HenrySD;User ID=DB_A41A57_HenrySD_admin;Password=123456789LOPEZ");
 
         protected void btnAceptar_Click(object sender, EventArgs e)

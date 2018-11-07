@@ -7,7 +7,8 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
+    <asp:SqlDataSource ID="SourceCategorias" runat="server" ConnectionString='<%$ ConnectionStrings:DB_A41A57_HenrySDConnectionString %>' SelectCommand="SELECT [CartegoriaID], [NombreCategoria] FROM [Categorias]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SourceProveedor" runat="server" ConnectionString='<%$ ConnectionStrings:DB_A41A57_HenrySDConnectionString %>' SelectCommand="SELECT [ProveedorID], [Compania] FROM [Proveedores]"></asp:SqlDataSource>
      <link href="../css/bootstrap.css" rel="stylesheet" />
      <div class="container" style="margin:10% 0% 10% 0%">
        <center><h5>Agregar nuevo producto</h5>
@@ -27,11 +28,11 @@
         Agregar Nombre de producto
       </div>
     </div>
-       <div class="col-md-6 mb-3">
+       <div class="col-md-6 mb-3" style="text-align:center;">
+           <asp:Label ID="Label2" runat="server" Text="Categorias"></asp:Label>
+           <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="Categoriatxt" CssClass="auto-style2" ErrorMessage=" " ValidationExpression="^[a-zA-Z]+$"></asp:RegularExpressionValidator>
            
-           <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtCategoria" CssClass="auto-style2" ErrorMessage="Ingrese solo letras" ValidationExpression="^[a-zA-Z]+$"></asp:RegularExpressionValidator>
-           
-        <asp:TextBox ID="txtCategoria" runat="server" CssClass="form-control" placeholder="Categoría" value="" required=""></asp:TextBox>
+           <asp:DropDownList ID="Categoriatxt" runat="server" DataSourceID="SourceCategorias" DataTextField="NombreCategoria" DataValueField="CartegoriaID" class="form-control"></asp:DropDownList>
      
       <div class="invalid-feedback">
         Agregar Categoría
@@ -63,14 +64,14 @@
 </div>
 
              <div class="row">
-    <div class="col-md-6 mb-3">
+    <div class="col-md-6 mb-3" style="text-align:center;">
+        <asp:Label ID="Label1" runat="server" Text="Proveedor"></asp:Label>
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="Proveedortxt" CssClass="auto-style2" ErrorMessage=" "  ValidationExpression="^[a-zA-Z]+$"></asp:RegularExpressionValidator>
       
-        <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="TextProveedor" CssClass="auto-style2" ErrorMessage="Ingrese solo letras" ValidationExpression="^[a-zA-Z]+$"></asp:RegularExpressionValidator>
-      
-        <asp:TextBox ID="TextProveedor" runat="server" class="form-control" placeholder="Proveedor" value="" required=""></asp:TextBox>
+        <asp:DropDownList ID="Proveedortxt" runat="server" DataSourceID="SourceProveedor" DataTextField="Compania" DataValueField="ProveedorID" CssClass="form-control"></asp:DropDownList>
       
       <div class="invalid-feedback">
-        Agregar proveedor
+        Elija un proveedor
       </div>
     </div>
        <div class="col-md-6 mb-3">
@@ -85,7 +86,7 @@
     </div>
 </div>
 
-        <center><asp:Button ID="btnAgregar" runat="server" Text="Agregar" CssClass="btn btn-primary" type="submit" OnClick="btnAgragar_Click" /></center> 
+        <center><asp:Button ID="btnAgregar" runat="server" Text="Agregar" CssClass="btn btn-primary" type="submit" OnClick="btnAgregar_Click" /></center> 
     
       </form>
         <script src="../js/jquery-3.3.1.min.js"></script>

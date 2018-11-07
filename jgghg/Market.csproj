@@ -119,6 +119,7 @@
     <Compile Include="Acceder.aspx.designer.cs">
       <DependentUpon>Acceder.aspx</DependentUpon>
     </Compile>
+    <Content Include="App_Code\Conexion.cs" />
     <Compile Include="Autenticar\Salir.aspx.cs">
       <DependentUpon>Salir.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -126,6 +127,7 @@
     <Compile Include="Autenticar\Salir.aspx.designer.cs">
       <DependentUpon>Salir.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ConexionSD.cs" />
     <Compile Include="MasterPages\Admin.Master.cs">
       <DependentUpon>Admin.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
