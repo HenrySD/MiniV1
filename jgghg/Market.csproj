@@ -92,6 +92,7 @@
     <Content Include="Font\webfonts\fa-solid-900.woff2" />
     <Content Include="MasterPages\Admin.Master" />
     <Content Include="MasterPages\Empleado.Master" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
