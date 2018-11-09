@@ -87,7 +87,7 @@ namespace jgghg
                 }
 
             }
-            catch (SqlException ex)
+            catch (SqlException )
             {
                 //Global.ultimoErrorDB = ex.Number;
                 //Global.msjErrorDB = ex.Message.ToString();
