@@ -23,6 +23,17 @@
             padding-left: 15px;
             padding-right: 15px;
         }
+        .auto-style3 {
+            display: block;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
     </style>
 </head>
     
@@ -36,11 +47,13 @@
            <div class="text-left">
        <h1>
            
+           &nbsp;&nbsp;&nbsp;&nbsp;
+           
            Iniciar Sesión</h1>
                <asp:Label ID="Error" runat="server" CssClass="auto-style1"></asp:Label>
   <div class="row">
     <div class="col-md-7 mb-3">
-      <label for="valida1">Usuario</label>&nbsp;<asp:TextBox ID="txtUsuario" runat="server" class="form-control" placeholder="Ingrese Usuario" value="" required="" onkeypress="return isNumberOrLetter(event)"></asp:TextBox>
+      <label for="valida1">Usuario</label>&nbsp;<asp:TextBox ID="txtUsuario" runat="server" class="form-control" placeholder="Ingrese Usuario" value="" required="" onkeypress="return isNumberOrLetter(event)" Width="343px"></asp:TextBox>
       
       <div class="invalid-feedback">
         Ingrese Usuario
@@ -48,15 +61,15 @@
     </div>
     <div class="col-md-7 mb-3">
       <label for="valida2">Contraseña</label>
-        <asp:TextBox ID="txtContra" runat="server" type="password" CssClass="form-control" placeholder="Ingrese contraseña" value="" required="" onkeypress="return isNumberOrLetter(event)"></asp:TextBox>
+        <asp:TextBox ID="txtContra" runat="server" type="password" CssClass="auto-style3" placeholder="Ingrese contraseña" value="" required="" onkeypress="return isNumberOrLetter(event)" Width="345px"></asp:TextBox>
      
       <div class="invalid-feedback">
         Ingresa Contraseña
       </div>
     </div>
-  </div>
-                
-           <asp:Button ID="btnAceptar" runat="server" Text="Ingresar" CssClass="btn btn-primary" type="submit" OnClick="btnAceptar_Click" />
+  </div>     
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     
+           <asp:Button ID="btnAceptar" runat="server" Text="Ingresar"  CssClass="btn btn-primary" type="submit" OnClick="btnAceptar_Click" />
     
            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DB_A41A57_HenrySDConnectionString %>" SelectCommand="SELECT [UserName], [Pass], [CargoID] FROM [Usuarios]"></asp:SqlDataSource>
    

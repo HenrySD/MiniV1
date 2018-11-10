@@ -5,15 +5,17 @@
 <html>
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <link href="../css/vendor.css" rel="stylesheet" />
     <link href="../css/app.css" rel="stylesheet" />
     <link href="../Font/all.css" rel="stylesheet" />
+
 </head>
 <body>
-   <div class="main-wrapper">
+     <div class="main-wrapper">
         <div class="app" id="app">
             <header class="header" style="position:fixed">
                 <div class="header-block header-block-collapse d-lg-none d-xl-none">
@@ -70,32 +72,38 @@
                                         </a>
                                     </li>
                                 </ul>
-                               
+                                <footer>
+                                    <ul>
+                                        <li>
+                                            <a href="#">View All </a>
+                                        </li>
+                                    </ul>
+                                </footer>
                             </div>
                         </li>
                         <li class="profile dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                                 <div class="img" style=""></div>
                                 <span class="name">
-                                    <asp:Label ID="Usuario" text= "Empleado" runat="server" ></asp:Label> </span>
+                                    <asp:Label ID="Usuario" Text="Empleado" runat="server" ></asp:Label> </span>
                             </a>
-                            <div class="dropdown-menu profile-dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <div class="dropdown-menu profile-dropdown-menu"  aria-labelledby="dropdownMenu1">
                                 <a class="dropdown-item" href="#">
                                     <i class="fa fa-user icon"></i> Perfil </a>
                                 <a class="dropdown-item" href="#">
                                     <i class="fa fa-bell icon"></i> Notificaciones </a>
                                 <a class="dropdown-item" href="#">
-                                    <i class="fa fa-gear icon"></i> Ajustes </a>
+                                    <i class="fa fa-gear icon"></i> Configuracion </a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="../Autenticar/Salir.aspx">
-                                    <i class="fa fa-power-off icon"></i>Salir </a>
+                                    <i class="fa fa-power-off icon"></i> Salir </a>
                             </div>
                         </li>
                     </ul>
                 </div>
                 
             </header>
-            <%--<aside  class="sidebar" style="position:fixed; background-color:darkblue;" >
+            <aside class="sidebar" style="position:fixed">
                 <div class="sidebar-container">
                     <div class="sidebar-header">
                         <div class="brand">
@@ -112,34 +120,8 @@
                     <nav class="menu">
                         <ul class="sidebar-menu metismenu" id="sidebar-menu">
                             <li class="active">
-                                <a href="#">
+                                <a href="../PagesEmpleado/EmpleadoHome.aspx">
                                     <i class="fa fa-home"></i>Inicio </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-th-large"></i>Consultas
-                                        <i class="fa arrow"></i>
-                                </a>
-                                <ul class="sidebar-nav">
-                                    <li>
-                                        <a href="#">Reportes de Ventas </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Compras Productos </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Ganancias </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Usuarios Activos </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Productos Proximos a Vencer </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Productos Vencidos </a>
-                                    </li>
-                                </ul>
                             </li>
                             <li>
                                
@@ -148,24 +130,26 @@
                                         <i class="fa arrow"></i>
                                 </a>
                                 <ul class="sidebar-nav">
+                                   
                                     <li>
-                                        <a href="#">Control Diario de Ventas </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Control de Ventas </a>
+                                        <a href="../PagesEmpleado/RegistrarVentas.aspx">Registrar  Ventas </a>
                                     </li>
                                    
                                 </ul>
                             </li>
                             <li>
                                
+                                </ul>
+                            </li>
+                            
                         </ul>
                     </nav>
                 </div>
 
-            </aside>--%>
+            </aside>
             <div class="sidebar-overlay" id="sidebar-overlay"></div>
-            
+            <div class="sidebar-mobile-menu-handle" id="sidebar-mobile-menu-handle"></div>
+            <div class="mobile-menu-handle"></div>
 
             <div class="container">
                     <div>
@@ -178,20 +162,20 @@
 
 
 
-           <%--<footer class="footer">
+            <footer class="footer">
 
                 <div class="footer-block author">
                     <ul>
                         <li>created by
-                                <a href="#">Ingeniera En Sistemas</a>
+                                <a href="#">Ingenieria En Sistemas</a>
                         </li>
                         <li>
                             <a href="#">otro</a>
                         </li>
                     </ul>
                 </div>
-            </footer>--%>
-            <%--<div class="modal fade" id="modal-media">
+            </footer>
+            <div class="modal fade" id="modal-media">
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -236,7 +220,7 @@
                     </div>
                     <!-- /.modal-content -->
                 </div>
-                <!-- /.modal-dialog -->--%>
+                <!-- /.modal-dialog -->
             </div>
             <!-- /.modal -->
             <div class="modal fade" id="confirm-modal">
@@ -263,7 +247,7 @@
             </div>
             <!-- /.modal -->
         </div>
-    
+    </div>
     <!-- Reference block for JS -->
     <div class="ref" id="ref">
         <div class="color-primary"></div>
