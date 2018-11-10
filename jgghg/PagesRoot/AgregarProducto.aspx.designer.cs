@@ -13,24 +13,6 @@ namespace jgghg.Pages {
     public partial class AgregarProducto {
         
         /// <summary>
-        /// Control SourceCategorias.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SourceCategorias;
-        
-        /// <summary>
-        /// Control SourceProveedor.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SourceProveedor;
-        
-        /// <summary>
         /// Control validar.
         /// </summary>
         /// <remarks>
@@ -67,22 +49,22 @@ namespace jgghg.Pages {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// Control RegularExpressionValidator2.
+        /// Control SqlDataSource1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator2;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
         
         /// <summary>
-        /// Control Categoriatxt.
+        /// Control txtCategoria.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList Categoriatxt;
+        protected global::System.Web.UI.WebControls.DropDownList txtCategoria;
         
         /// <summary>
         /// Control RegularExpressionValidator7.
@@ -139,22 +121,22 @@ namespace jgghg.Pages {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// Control RegularExpressionValidator3.
+        /// Control SqlDataSource2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator3;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
         
         /// <summary>
-        /// Control Proveedortxt.
+        /// Control txtProveedor.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList Proveedortxt;
+        protected global::System.Web.UI.WebControls.DropDownList txtProveedor;
         
         /// <summary>
         /// Control RegularExpressionValidator4.

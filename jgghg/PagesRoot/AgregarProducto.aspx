@@ -7,8 +7,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:SqlDataSource ID="SourceCategorias" runat="server" ConnectionString='<%$ ConnectionStrings:DB_A41A57_HenrySDConnectionString %>' SelectCommand="SELECT [CartegoriaID], [NombreCategoria] FROM [Categorias]"></asp:SqlDataSource>
-    <asp:SqlDataSource ID="SourceProveedor" runat="server" ConnectionString='<%$ ConnectionStrings:DB_A41A57_HenrySDConnectionString %>' SelectCommand="SELECT [ProveedorID], [Compania] FROM [Proveedores]"></asp:SqlDataSource>
+   
      <link href="../css/bootstrap.css" rel="stylesheet" />
      <div class="container" style="margin:10% 0% 10% 0%">
        <center><h5>Agregar nuevo producto</h5>
@@ -30,9 +29,8 @@
     </div>
        <div class="col-md-6 mb-3" style="text-align:center;">
            <asp:Label ID="Label2" runat="server" Text="Categorias"></asp:Label>
-           <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="Categoriatxt" CssClass="auto-style2" ErrorMessage=" " ValidationExpression="^[a-zA-Z]+$"></asp:RegularExpressionValidator>
-           
-           <asp:DropDownList ID="Categoriatxt" runat="server" DataSourceID="SourceCategorias" DataTextField="NombreCategoria" DataValueField="CartegoriaID" class="form-control"></asp:DropDownList>
+           <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString='<%$ ConnectionStrings:DB_A41A57_HenrySDConnectionString %>' SelectCommand="SELECT [CartegoriaID], [NombreCategoria] FROM [Categorias]"></asp:SqlDataSource>
+           <asp:DropDownList ID="txtCategoria" runat="server" DataSourceID="SqlDataSource1" DataTextField="NombreCategoria" DataValueField="CartegoriaID" class="form-control" AutoPostBack="True"></asp:DropDownList>
      
       <div class="invalid-feedback">
         Agregar Categoría
@@ -66,9 +64,9 @@
              <div class="row">
     <div class="col-md-6 mb-3" style="text-align:center;">
         <asp:Label ID="Label1" runat="server" Text="Proveedor"></asp:Label>
-        <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="Proveedortxt" CssClass="auto-style2" ErrorMessage=" "  ValidationExpression="^[a-zA-Z]+$"></asp:RegularExpressionValidator>
-      
-        <asp:DropDownList ID="Proveedortxt" runat="server" DataSourceID="SourceProveedor" DataTextField="Compania" DataValueField="ProveedorID" CssClass="form-control"></asp:DropDownList>
+        
+        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString='<%$ ConnectionStrings:DB_A41A57_HenrySDConnectionString %>' SelectCommand="SELECT [ProveedorID], [Compania] FROM [Proveedores]"></asp:SqlDataSource>
+        <asp:DropDownList ID="txtProveedor" runat="server" DataSourceID="SqlDataSource2" DataTextField="Compania" DataValueField="ProveedorID" CssClass="form-control" AutoPostBack="True"></asp:DropDownList>
       
       <div class="invalid-feedback">
         Elija un proveedor
@@ -87,7 +85,7 @@
 </div>
 
         <center><asp:Button ID="btnAgregar" runat="server" Text="Agregar" CssClass="btn btn-primary" type="submit" OnClick="btnAgregar_Click" /></center> 
-    
+           
       </form>
         <script src="../js/jquery-3.3.1.min.js"></script>
         <script src="../js/FuncionValidar.js"></script>
