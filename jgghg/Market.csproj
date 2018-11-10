@@ -107,6 +107,7 @@
     <Content Include="js\vendor.js" />
     <Content Include="PagesAdmin\AdminHome.aspx" />
     <Content Include="PagesEmpleado\EmpleadoHome.aspx" />
+    <Content Include="PagesEmpleado\RegistrarVentas.aspx" />
     <Content Include="PagesRoot\RootHome.aspx" />
     <Content Include="PagesRoot\AgregarProducto.aspx" />
     <Content Include="PagesRoot\AgregarUsuario.aspx" />
@@ -158,6 +159,13 @@
     </Compile>
     <Compile Include="PagesEmpleado\EmpleadoHome.aspx.designer.cs">
       <DependentUpon>EmpleadoHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesEmpleado\RegistrarVentas.aspx.cs">
+      <DependentUpon>RegistrarVentas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesEmpleado\RegistrarVentas.aspx.designer.cs">
+      <DependentUpon>RegistrarVentas.aspx</DependentUpon>
     </Compile>
     <Compile Include="PagesRoot\TodosLosProductos.aspx.cs">
       <DependentUpon>TodosLosProductos.aspx</DependentUpon>
