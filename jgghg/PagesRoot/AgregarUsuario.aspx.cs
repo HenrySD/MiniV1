@@ -20,8 +20,8 @@ namespace jgghg.Pages
             }
         }
         //ConexionSD sd = new ConexionSD();
-        
-        SqlConnection con = new SqlConnection("Data Source=sql7004.site4now.net;Initial Catalog=DB_A41A57_HenrySD;User ID=DB_A41A57_HenrySD_admin;Password=123456789LOPEZ");
+
+        SqlConnection con = new SqlConnection("Data Source = sql7004.site4now.net; Initial Catalog = DB_A41A57_HenrySD; User ID = DB_A41A57_HenrySD_admin; Password=123456789LOPEZ");
 
         protected void btnAceptar_Click(object sender, EventArgs e)
         {
