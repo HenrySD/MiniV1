@@ -178,7 +178,11 @@
                                     <li>
                                         <a href="../PagesRoot/AgregarProducto.aspx">Ingresar Nuevo Producto </a>
                                     </li>
-                                    <li>
+                                   
+                                     <li>
+                                        <a href="../PagesRoot/RegistrarDetallesDeCompra.aspx">Ingresar los detalles de compra </a>
+                                    </li>
+                                     <li>
                                         <a href="#">Editar Productos </a>
                                     </li>
                                 </ul>
@@ -211,7 +215,7 @@
                                         <a href="#">Editar Proveedor </a>
                                     </li>
                                     <li>
-                                        <a href="#">Agregar Proveedores </a>
+                                        <a href="../PagesRoot/AgregarProveedores.aspx">Agregar Proveedores </a>
                                     </li>
                                     
                                 </ul>
