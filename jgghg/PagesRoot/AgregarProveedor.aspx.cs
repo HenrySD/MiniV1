@@ -28,7 +28,7 @@ namespace jgghg.PagesRoot
             SqlDataAdapter sda = new SqlDataAdapter(query, con);
             sda.SelectCommand.ExecuteNonQuery();
             con.Close();
-            Response.Write("<script type='text/javascript'>alert('Datos ingresados OK');</script>");
+            Response.Write("<script>alert('Datos ingresados OK');</script>");
 
         }
     }
