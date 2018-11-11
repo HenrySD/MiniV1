@@ -6,15 +6,38 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div style="margin:10% 0% 10% 0%">
     <form action="/" method="post" runat="server">
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString='<%$ ConnectionStrings:DB_A41A57_HenrySDConnectionString %>' SelectCommand="SELECT Productos.ProductoID, Productos.NameProducto, Proveedores.Compania AS 'Proveedor', Categorias.NombreCategoria, Productos.PrecioUnit, Productos.UnidadesStock FROM Categorias INNER JOIN Productos ON Categorias.CartegoriaID = Productos.CategoriaID INNER JOIN Proveedores ON Productos.ProveedorID = Proveedores.ProveedorID"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString='<%$ ConnectionStrings:DB_A41A57_HenrySDConnectionString %>' SelectCommand="SELECT * FROM [Productos]" DeleteCommand="DELETE FROM [Productos] WHERE [ProductoID] = @ProductoID" InsertCommand="INSERT INTO [Productos] ([ProductoID], [NameProducto], [ProveedorID], [CategoriaID], [PrecioUnit], [UnidadesStock]) VALUES (@ProductoID, @NameProducto, @ProveedorID, @CategoriaID, @PrecioUnit, @UnidadesStock)" UpdateCommand="UPDATE [Productos] SET [NameProducto] = @NameProducto, [ProveedorID] = @ProveedorID, [CategoriaID] = @CategoriaID, [PrecioUnit] = @PrecioUnit, [UnidadesStock] = @UnidadesStock WHERE [ProductoID] = @ProductoID">
+            <DeleteParameters>
+                <asp:Parameter Name="ProductoID" Type="String"></asp:Parameter>
+            </DeleteParameters>
+            <InsertParameters>
+                <asp:Parameter Name="ProductoID" Type="String"></asp:Parameter>
+                <asp:Parameter Name="NameProducto" Type="String"></asp:Parameter>
+                <asp:Parameter Name="ProveedorID" Type="Int32"></asp:Parameter>
+                <asp:Parameter Name="CategoriaID" Type="Int32"></asp:Parameter>
+                <asp:Parameter Name="PrecioUnit" Type="Decimal"></asp:Parameter>
+                <asp:Parameter Name="UnidadesStock" Type="Byte"></asp:Parameter>
+            </InsertParameters>
+            <UpdateParameters>
+                <asp:Parameter Name="NameProducto" Type="String"></asp:Parameter>
+                <asp:Parameter Name="ProveedorID" Type="Int32"></asp:Parameter>
+                <asp:Parameter Name="CategoriaID" Type="Int32"></asp:Parameter>
+                <asp:Parameter Name="PrecioUnit" Type="Decimal"></asp:Parameter>
+                <asp:Parameter Name="UnidadesStock" Type="Byte"></asp:Parameter>
+                <asp:Parameter Name="ProductoID" Type="String"></asp:Parameter>
+            </UpdateParameters>
+        </asp:SqlDataSource>
         <dx:ASPxGridView ID="ASPxGridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" KeyFieldName="ProductoID" Theme="MaterialCompact">
+            <SettingsDataSecurity AllowInsert="False"></SettingsDataSecurity>
+
             <Columns>
-                <dx:GridViewDataTextColumn FieldName="ProductoID" ReadOnly="True" VisibleIndex="0"></dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="NameProducto" VisibleIndex="1"></dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="Proveedor" VisibleIndex="2"></dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="NombreCategoria" VisibleIndex="3"></dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="PrecioUnit" VisibleIndex="4"></dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="UnidadesStock" VisibleIndex="5"></dx:GridViewDataTextColumn>
+                <dx:GridViewCommandColumn ShowEditButton="True" VisibleIndex="0" ShowDeleteButton="True"></dx:GridViewCommandColumn>
+                <dx:GridViewDataTextColumn FieldName="ProductoID" ReadOnly="True" VisibleIndex="1"></dx:GridViewDataTextColumn>
+                <dx:GridViewDataTextColumn FieldName="NameProducto" VisibleIndex="2"></dx:GridViewDataTextColumn>
+                <dx:GridViewDataTextColumn FieldName="ProveedorID" VisibleIndex="3"></dx:GridViewDataTextColumn>
+                <dx:GridViewDataTextColumn FieldName="CategoriaID" VisibleIndex="4"></dx:GridViewDataTextColumn>
+                <dx:GridViewDataTextColumn FieldName="PrecioUnit" VisibleIndex="5"></dx:GridViewDataTextColumn>
+                <dx:GridViewDataTextColumn FieldName="UnidadesStock" VisibleIndex="6"></dx:GridViewDataTextColumn>
             </Columns>
         </dx:ASPxGridView>
 

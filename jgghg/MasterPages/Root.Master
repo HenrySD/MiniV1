@@ -182,9 +182,7 @@
                                      <li>
                                         <a href="../PagesRoot/RegistrarDetallesDeCompra.aspx">Ingresar los detalles de compra </a>
                                     </li>
-                                     <li>
-                                        <a href="#">Editar Productos </a>
-                                    </li>
+                                    
                                 </ul>
                             </li>
                             <li>
@@ -209,13 +207,11 @@
                                 </a>
                                 <ul class="sidebar-nav">
                                     <li>
-                                        <a href="#">Listado Proveedores </a>
+                                        <a href="../PagesRoot/TodosLosProveedores.aspx">Listado Proveedores </a>
                                     </li>
+                                    
                                     <li>
-                                        <a href="#">Editar Proveedor </a>
-                                    </li>
-                                    <li>
-                                        <a href="../PagesRoot/AgregarProveedores.aspx">Agregar Proveedores </a>
+                                        <a href="../PagesRoot/AgregarProveedor.aspx">Agregar Proveedores </a>
                                     </li>
                                     
                                 </ul>

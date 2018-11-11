@@ -41,6 +41,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.Data.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.Web.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v18.1.Core, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.RichEdit.v18.1.Core, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Web.ASPxThemes.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -107,11 +108,13 @@
     <Content Include="js\vendor.js" />
     <Content Include="PagesAdmin\AdminHome.aspx" />
     <Content Include="PagesEmpleado\EmpleadoHome.aspx" />
+    <Content Include="PagesRoot\AgregarProveedor.aspx" />
     <Content Include="PagesRoot\RegistrarDetallesDeCompra.aspx" />
     <Content Include="PagesRoot\RootHome.aspx" />
     <Content Include="PagesRoot\AgregarProducto.aspx" />
     <Content Include="PagesRoot\AgregarUsuario.aspx" />
     <Content Include="PagesRoot\TodosLosProductos.aspx" />
+    <Content Include="PagesRoot\TodosLosProveedores.aspx" />
     <Content Include="PagesRoot\TodosUsuarios.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -160,6 +163,13 @@
     <Compile Include="PagesEmpleado\EmpleadoHome.aspx.designer.cs">
       <DependentUpon>EmpleadoHome.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PagesRoot\AgregarProveedor.aspx.cs">
+      <DependentUpon>AgregarProveedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesRoot\AgregarProveedor.aspx.designer.cs">
+      <DependentUpon>AgregarProveedor.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PagesRoot\RegistrarDetallesDeCompra.aspx.cs">
       <DependentUpon>RegistrarDetallesDeCompra.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -173,6 +183,13 @@
     </Compile>
     <Compile Include="PagesRoot\TodosLosProductos.aspx.designer.cs">
       <DependentUpon>TodosLosProductos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesRoot\TodosLosProveedores.aspx.cs">
+      <DependentUpon>TodosLosProveedores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesRoot\TodosLosProveedores.aspx.designer.cs">
+      <DependentUpon>TodosLosProveedores.aspx</DependentUpon>
     </Compile>
     <Compile Include="PagesRoot\TodosUsuarios.aspx.cs">
       <DependentUpon>TodosUsuarios.aspx</DependentUpon>
