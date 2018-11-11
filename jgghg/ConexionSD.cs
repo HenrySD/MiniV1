@@ -14,6 +14,7 @@ namespace jgghg
         private SqlConnection conn ;
         private SqlCommand cmd;
         private String myConnectionString ;
+
         
         public ConexionSD()
         {
