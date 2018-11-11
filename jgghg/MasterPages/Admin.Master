@@ -118,7 +118,7 @@
                     <nav class="menu">
                         <ul class="sidebar-menu metismenu" id="sidebar-menu">
                             <li class="active">
-                                <a href="#">
+                                <a href="../PagesAdmin/AdminHome.aspx">
                                     <i class="fa fa-home"></i>Inicio </a>
                             </li>
                             <li>
@@ -139,12 +139,7 @@
                                     <li>
                                         <a href="#">Usuarios Activos </a>
                                     </li>
-                                    <li>
-                                        <a href="#">Productos Proximos a Vencer </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Productos Vencidos </a>
-                                    </li>
+                                    
                                 </ul>
                             </li>
                             <li>
@@ -154,7 +149,7 @@
                                 </a>
                                 <ul class="sidebar-nav">
                                     <li>
-                                        <a href="../Pages/AgregarUsuario.aspx">Registrar Nuevo Usuario </a>
+                                        <a href="../PagesAdmin/AgregarUsuariosAdmin.aspx">Registrar Nuevo Usuario </a>
                                     </li>
                                     <li>
                                         <a href="#">Recuperar Contraseña </a>
@@ -168,11 +163,12 @@
                                 </a>
                                 <ul class="sidebar-nav">
                                     <li>
-                                        <a href="../Pages/AgregarProducto.aspx">Ingresar Nuevo Producto </a>
+                                        <a href="../PagesAdmin/IngNewProducto.aspx">Ingresar Nuevo Producto </a>
                                     </li>
                                     <li>
-                                        <a href="#">Editar Productos </a>
+                                        <a href="../PagesAdmin/TodosLosProductos.aspx">Listado Productos </a>
                                     </li>
+                                    
                                 </ul>
                             </li>
                             <li>
@@ -197,13 +193,11 @@
                                 </a>
                                 <ul class="sidebar-nav">
                                     <li>
-                                        <a href="#">Listado Proveedores </a>
+                                        <a href="../PagesAdmin/TodosProveedoresAdmin.aspx">Listado Proveedores </a>
                                     </li>
+                                    
                                     <li>
-                                        <a href="#">Editar Proveedor </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Agregar Proveedores </a>
+                                        <a href="../PagesAdmin/AgregarProveedorAdmin.aspx">Agregar Proveedores </a>
                                     </li>
                                     
                                 </ul>

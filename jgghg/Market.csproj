@@ -107,6 +107,11 @@
     <Content Include="js\app.js" />
     <Content Include="js\vendor.js" />
     <Content Include="PagesAdmin\AdminHome.aspx" />
+    <Content Include="PagesAdmin\AgregarProveedorAdmin.aspx" />
+    <Content Include="PagesAdmin\AgregarUsuariosAdmin.aspx" />
+    <Content Include="PagesAdmin\IngNewProducto.aspx" />
+    <Content Include="PagesAdmin\TodosLosProductos.aspx" />
+    <Content Include="PagesAdmin\TodosProveedoresAdmin.aspx" />
     <Content Include="PagesEmpleado\EmpleadoHome.aspx" />
     <Content Include="PagesRoot\AgregarProveedor.aspx" />
     <Content Include="PagesRoot\RegistrarDetallesDeCompra.aspx" />
@@ -155,6 +160,41 @@
     </Compile>
     <Compile Include="PagesAdmin\AdminHome.aspx.designer.cs">
       <DependentUpon>AdminHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesAdmin\AgregarProveedorAdmin.aspx.cs">
+      <DependentUpon>AgregarProveedorAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesAdmin\AgregarProveedorAdmin.aspx.designer.cs">
+      <DependentUpon>AgregarProveedorAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesAdmin\AgregarUsuariosAdmin.aspx.cs">
+      <DependentUpon>AgregarUsuariosAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesAdmin\AgregarUsuariosAdmin.aspx.designer.cs">
+      <DependentUpon>AgregarUsuariosAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesAdmin\IngNewProducto.aspx.cs">
+      <DependentUpon>IngNewProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesAdmin\IngNewProducto.aspx.designer.cs">
+      <DependentUpon>IngNewProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesAdmin\TodosLosProductos.aspx.cs">
+      <DependentUpon>TodosLosProductos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesAdmin\TodosLosProductos.aspx.designer.cs">
+      <DependentUpon>TodosLosProductos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesAdmin\TodosProveedoresAdmin.aspx.cs">
+      <DependentUpon>TodosProveedoresAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesAdmin\TodosProveedoresAdmin.aspx.designer.cs">
+      <DependentUpon>TodosProveedoresAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="PagesEmpleado\EmpleadoHome.aspx.cs">
       <DependentUpon>EmpleadoHome.aspx</DependentUpon>
