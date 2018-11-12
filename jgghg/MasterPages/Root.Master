@@ -87,7 +87,7 @@
                                     <asp:Label ID="Usuario" runat="server" ></asp:Label> </span>
                             </a>
                             <div class="dropdown-menu profile-dropdown-menu" aria-labelledby="dropdownMenu1">
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="../PagesRoot/PerfilRoot.aspx">
                                     <i class="fa fa-user icon"></i> Perfil </a>
                                 <a class="dropdown-item" href="#">
                                     <i class="fa fa-bell icon"></i> Notificaciones </a>
@@ -156,7 +156,7 @@
                                         <a href="../PagesRoot/AgregarUsuario.aspx">Registrar Nuevo Usuario </a>
                                     </li>
                                     <li>
-                                        <a href="#">Recuperar Contraseña </a>
+                                        <a href="../PagesRoot/RecuperarPassRoot.aspx">Recuperar Contraseña </a>
                                     </li>
                                 </ul>
                             </li>

@@ -69,7 +69,7 @@
     </div>
   </div>     
            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     
-           <asp:Button ID="btnAceptar" runat="server" Text="Ingresar"  CssClass="btn btn-primary" type="submit" OnClick="btnAceptar_Click" />
+           <asp:Button ID="btnAceptar" runat="server" Text="Ingresar"  CssClass="btn btn-primary" type="submit" OnClick="btnAceptar_Click" style="height: 31px" />
     
            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DB_A41A57_HenrySDConnectionString %>" SelectCommand="SELECT [UserName], [Pass], [CargoID] FROM [Usuarios]"></asp:SqlDataSource>
    

@@ -141,9 +141,9 @@
             </div>
          
         
-
+<center>
         <asp:Button ID="btnAgregar" runat="server" Text="Agregar" CssClass="btn btn-primary" type="submit" OnClick="btnAceptar_Click" style="text-align:center"/>
-
+    </center>
         </form>
         </div>
         
