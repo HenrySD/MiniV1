@@ -114,6 +114,7 @@
     <Content Include="PagesAdmin\TodosProveedoresAdmin.aspx" />
     <Content Include="PagesEmpleado\EmpleadoHome.aspx" />
     <Content Include="PagesRoot\AgregarProveedor.aspx" />
+    <Content Include="PagesRoot\PerfilRoot.aspx" />
     <Content Include="PagesRoot\RecuperarPassRoot.aspx" />
     <Content Include="PagesRoot\RegistrarDetallesDeCompra.aspx" />
     <Content Include="PagesRoot\RootHome.aspx" />
@@ -210,6 +211,13 @@
     </Compile>
     <Compile Include="PagesRoot\AgregarProveedor.aspx.designer.cs">
       <DependentUpon>AgregarProveedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesRoot\PerfilRoot.aspx.cs">
+      <DependentUpon>PerfilRoot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesRoot\PerfilRoot.aspx.designer.cs">
+      <DependentUpon>PerfilRoot.aspx</DependentUpon>
     </Compile>
     <Compile Include="PagesRoot\RecuperarPassRoot.aspx.cs">
       <DependentUpon>RecuperarPassRoot.aspx</DependentUpon>
