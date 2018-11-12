@@ -13,6 +13,15 @@ namespace jgghg.PagesRoot {
     public partial class AgregarProveedor {
         
         /// <summary>
+        /// Control validar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm validar;
+        
+        /// <summary>
         /// Control RegularExpressionValidator4.
         /// </summary>
         /// <remarks>
