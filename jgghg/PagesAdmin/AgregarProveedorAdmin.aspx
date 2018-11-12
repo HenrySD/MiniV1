@@ -10,35 +10,43 @@
         <h5 style="text-align:center">Agregar Nuevo Proveedor</h5>
         <div class="row">
             <div class="col-md-5 mb-2">
+                 <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="txtProveedorID" CssClass="auto-style2" ErrorMessage="Ingrese solo números" ValidationExpression="^[0-9]*$" ForeColor="Red"></asp:RegularExpressionValidator>
                 <asp:TextBox ID="txtProveedorID" runat="server" placeholder="Ingrese ID" CssClass="form-control"></asp:TextBox>
                 
             </div>
             <div class="col-md-5 mb-2">
+                 <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" ControlToValidate="txtCompania" CssClass="auto-style2" ErrorMessage="Ingrese solo letras" ValidationExpression="^[a-zA-Z]+$" ForeColor="Red"></asp:RegularExpressionValidator>
                 <asp:TextBox ID="txtCompania" runat="server" placeholder="Ingrese Compania" CssClass="form-control"></asp:TextBox>
 
             </div>
         </div>
         <div class="row">
             <div class="col-md-5 mb-2">
+                  <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="txtCiudad" CssClass="auto-style2" ErrorMessage="Ingrese solo letras" ValidationExpression="^[a-zA-Z]+$" ForeColor="Red"></asp:RegularExpressionValidator>
                 <asp:TextBox ID="txtCiudad" runat="server" placeholder="Ingrese Ciudad" CssClass="form-control"></asp:TextBox>
             </div>
             <div class="col-md-5 mb-2">
+                 <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtCodigoPostal" CssClass="auto-style2" ErrorMessage="Ingrese solo números" ValidationExpression="^[0-9]*$" ForeColor="Red"></asp:RegularExpressionValidator>
                 <asp:TextBox ID="txtCodigoPostal" runat="server" placeholder="Ingrese CodigoPostal" CssClass="form-control"></asp:TextBox>
             </div>
         </div>
          <div class="row">
             <div class="col-md-5 mb-2">
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator6" runat="server" ControlToValidate="txtTelefono" CssClass="auto-style2" ErrorMessage="Ingrese solo números" ValidationExpression="^[0-9]*$" ForeColor="Red"></asp:RegularExpressionValidator>
                 <asp:TextBox ID="txtTelefono" runat="server" placeholder="Ingrese Telefono" CssClass="form-control"></asp:TextBox>
             </div>
             <div class="col-md-5 mb-2">
+                 <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtCell" CssClass="auto-style2" ErrorMessage="Ingrese solo números" ValidationExpression="^[0-9]*$" ForeColor="Red"></asp:RegularExpressionValidator>
                 <asp:TextBox ID="txtCell" runat="server" placeholder="Ingrese Celular" CssClass="form-control"></asp:TextBox>
             </div>
         </div>
         <div class="row">
             <div class="col-md-5 mb-2">
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator7" runat="server" ControlToValidate="txtEmpresa" CssClass="auto-style2" ErrorMessage="Ingrese solo letras" ValidationExpression="^[a-zA-Z]+$" ForeColor="Red"></asp:RegularExpressionValidator>
                 <asp:TextBox ID="txtEmpresa" runat="server" placeholder="Ingrese Empresa" CssClass="form-control"></asp:TextBox>
             </div>
             <div class="col-md-5 mb-2">
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator8" runat="server" ControlToValidate="txtDepa" CssClass="auto-style2" ErrorMessage="Ingrese solo letras" ValidationExpression="^[a-zA-Z]+$" ForeColor="Red"></asp:RegularExpressionValidator>
                 <asp:TextBox ID="txtDepa" runat="server" placeholder="Ingrese Departamento" CssClass="form-control"></asp:TextBox>
             </div>
         </div>
