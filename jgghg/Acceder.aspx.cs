@@ -62,7 +62,7 @@ namespace jgghg
                     {
                         
             
-                            Error.Text = "Ingrese Datos Corectos";
+                            Error.Text = "Ingrese Datos Correctos";
                         // alertas pero salen en 3 veses no funionan con el .trim()
                         //Response.Write("<script>alert('Ingrese otro');</script>");
 

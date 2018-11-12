@@ -25,10 +25,10 @@ namespace jgghg.PagesRoot
         {
             con.Open();
             string query = "insert into Proveedores(ProveedorID,Departamento,Ciudad,CodigoPostal,Telefono,Cell,Empresa,Compania)values('"+txtProveedorID.Text+ "','" + txtDepa.Text + "','" + txtCiudad.Text + "','" + txtCodigoPostal.Text + "','" + txtTelefono.Text + "','" + txtCell.Text + "','" + txtEmpresa.Text + "','" + txtCompania.Text + "')";
-            SqlDataAdapter sda = new SqlDataAdapter(query, con);
-            sda.SelectCommand.ExecuteNonQuery();
+            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+            SDA.SelectCommand.ExecuteNonQuery();
             con.Close();
-            Response.Write("<script>alert('Datos ingresados OK');</script>");
+            Response.Write("<script>alert('Datos ingresados exitosamente');</script>");
 
         }
     }
