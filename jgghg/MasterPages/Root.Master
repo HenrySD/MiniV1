@@ -156,7 +156,7 @@
                                         <a href="../PagesRoot/AgregarUsuario.aspx">Registrar Nuevo Usuario </a>
                                     </li>
                                     <li>
-                                        <a href="#">Recuperar Contraseña </a>
+                                        <a href="../PagesRoot/RecuperarPassRoot.aspx">Recuperar Contraseña </a>
                                     </li>
                                 </ul>
                             </li>
