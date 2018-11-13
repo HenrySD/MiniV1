@@ -50,7 +50,7 @@
            &nbsp;&nbsp;&nbsp;&nbsp;
            
            Iniciar Sesión</h1>
-               <asp:Label ID="Error" runat="server" CssClass="auto-style1"></asp:Label>
+              <%-- <asp:Label ID="Error" runat="server" CssClass="auto-style1"></asp:Label>--%>
   <div class="row">
     <div class="col-md-7 mb-3">
       <label for="valida1">Usuario</label>&nbsp;<asp:TextBox ID="txtUsuario" runat="server" class="form-control" placeholder="Ingrese Usuario" value="" required="" onkeypress="return isNumberOrLetter(event)" Width="343px"></asp:TextBox>
