@@ -172,9 +172,13 @@
                                     <li>
                                         <a href="../PagesRoot/AgregarProducto.aspx">Ingresar Nuevo Producto </a>
                                     </li>
-                                   
+                                  
+                                  
                                      <li>
-                                        <a href="../PagesRoot/RegistrarDetallesDeCompra.aspx">Ingresar los detalles de compra </a>
+                                        <a href="../PagesRoot/RegistrarDetallesDeCompra.aspx"> Ingresar los detalles de compra </a>
+                                    </li>
+                                     <li>
+                                        <a href=""> Lista De Compras al Proveedor </a>
                                     </li>
                                     
                                 </ul>
