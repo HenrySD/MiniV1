@@ -13,19 +13,20 @@
        <center><h5>Agregar nuevo producto</h5>
            <h6>ingrese la imformación de los productos</h6>
        </center>
-       <br />
          <br />
        <form class="container"  novalidate="" runat="server" id="validar" >
   <div class="row">
     <div class="col-md-6 mb-3">
       
-        <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" ControlToValidate="txtNombreProducto" CssClass="auto-style2" ErrorMessage="Ingrese solo letras" ValidationExpression="^[a-zA-Z]+$"></asp:RegularExpressionValidator>
-      
-        <asp:TextBox ID="txtNombreProducto" runat="server" class="form-control" placeholder="Nombre del Producto" value="" required=""></asp:TextBox>
-      
+        
       <div class="invalid-feedback">
         Agregar Nombre de producto
       </div>
+        <asp:Label ID="Label3" runat="server" Text="Nombre de producto"></asp:Label>
+        <br />
+        <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSourceCompraID" DataTextField="Nombre_Producto" DataValueField="CompraID" Width="236px">
+        </asp:DropDownList>
+        <asp:SqlDataSource ID="SqlDataSourceCompraID" runat="server" ConnectionString="<%$ ConnectionStrings:DB_A41A57_HenrySDConnectionString %>" SelectCommand="SELECT [CompraID], [Nombre_Producto] FROM [Compras]"></asp:SqlDataSource>
     </div>
        <div class="col-md-6 mb-3" style="text-align:center;">
            <asp:Label ID="Label2" runat="server" Text="Categorias"></asp:Label>
@@ -38,17 +39,6 @@
     </div>
 </div>
              <div class="row">
-    <div class="col-md-6 mb-3">
-      
-        <asp:RegularExpressionValidator ID="RegularExpressionValidator7" runat="server" ControlToValidate="TextPrecioUnit" CssClass="auto-style2" ErrorMessage="Ingrese solo números con dos decimales" ValidationExpression="^\$?(?!0.00)(([0-9]{1,3},([0-9]{3},)*)[0-9]{3}|[0-9]{1,3})(\.[0-9]{2})?$"></asp:RegularExpressionValidator>
-        <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="TextPrecioUnit" CssClass="auto-style2" ErrorMessage="Entre 0.01 y 100.00" MaximumValue="100.00" MinimumValue="0.00"></asp:RangeValidator>
-      
-        <asp:TextBox ID="TextPrecioUnit" runat="server" class="form-control" placeholder="Precio Unitario" value="" required=""></asp:TextBox>
-      
-      <div class="invalid-feedback">
-        Agregar precio unitario
-      </div>
-    </div>
        <div class="col-md-6 mb-3">
        
            <asp:RegularExpressionValidator ID="RegularExpressionValidator6" runat="server" ControlToValidate="TextExistencia" CssClass="auto-style2" ErrorMessage="Ingrese solo números" ValidationExpression="^[0-9]*$"></asp:RegularExpressionValidator>

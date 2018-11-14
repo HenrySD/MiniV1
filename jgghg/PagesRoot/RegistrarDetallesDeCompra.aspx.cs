@@ -16,25 +16,7 @@ namespace jgghg.PagesRoot
             
         }
         
-      SqlConnection a = new SqlConnection("Data Source = sql7004.site4now.net; Initial Catalog = DB_A41A57_HenrySD; User ID = DB_A41A57_HenrySD_admin; Password=123456789LOPEZ");
-        protected void compra_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                a.Open();
-                string consulCompra = ("insert into Compras(PrecioUnit,Fecha_Compra,Cantidad,ProveedorID)values('" + TextProcioUnit.Text + "','" + TextDateCompra.Text + "','" + TextCantidad.Text + "','" + TextProveedorID.Text + "')");
-                SqlDataAdapter SDACompra = new SqlDataAdapter(consulCompra, a);
-                SDACompra.SelectCommand.ExecuteNonQuery();
-                Response.Write("<script>alert('Compra Guardada');</script>");
-                a.Close();
-            }
-            catch (Exception)
-            {
-
-                Response.Write("<script>alert('Por favor Reincie el formulario');</script>");
-            }
-          
-        }
+     
 
         SqlConnection c = new SqlConnection("Data Source = sql7004.site4now.net; Initial Catalog = DB_A41A57_HenrySD; User ID = DB_A41A57_HenrySD_admin; Password=123456789LOPEZ");
         protected void DetalleCompra_Click(object sender, EventArgs e)
@@ -43,9 +25,7 @@ namespace jgghg.PagesRoot
             {
                 c.Open();
 
-                string consul = ("insert into DetallesCompras(ProductoID,Descuento,FacturaID,Fecha,Total,CompraID)values('" + txtProductID.Text + "','" + txtDescuento.Text + "','" + txtFactura.Text + "','" + txtFecha.Text + "','" + txtTotal.Text + "','" + txtCompra.Text + "')");
-
-
+                string consul = ("insert into Compras(Nombre_Producto,PrecioUnit,Fecha_Compra,Cantidad,Descuento,FacturaID,Total,ProveedorID)values('" + TextNombrePorduc.Text + "','" + TextProcioUnit.Text + "','" + TextDateCompra.Text + "','" + TextCantidad.Text + "','" + txtDescuento.Text + "','" + txtFactura.Text + "','" + txtTotal.Text + "','" + DropDownList1.Text + "')");
 
                 SqlDataAdapter SDA = new SqlDataAdapter(consul, c);
                 SDA.SelectCommand.ExecuteNonQuery();
@@ -59,8 +39,20 @@ namespace jgghg.PagesRoot
                 Response.Write("<script>alert('Por favor Reincie el formulario');</script>");
             }
         }
-           
-        
+
+        protected void Calcular_Total_Descuento_Click(object sender, EventArgs e)
+        {
+            double a, b, c, d, f, g;
+            b = double.Parse(TextProcioUnit.Text);
+            c = double.Parse(TextCantidad.Text);
+            d = double.Parse(txtDescuento.Text);
+
+            g = d / 100;
+            a = b * c;
+            f = a - g;
+
+            txtTotal.Text = Convert.ToString(f);
+        }
     }
 
 }

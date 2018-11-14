@@ -175,10 +175,10 @@
                                   
                                   
                                      <li>
-                                        <a href="../PagesRoot/RegistrarDetallesDeCompra.aspx"> Ingresar los detalles de compra </a>
+                                        <a href="../PagesRoot/RegistrarDetallesDeCompra.aspx"> Ingresar la compra que se realizo al proveedor</a>
                                     </li>
                                      <li>
-                                        <a href=""> Lista De Compras al Proveedor </a>
+                                        <a href="../PagesRoot/ListaComprasProve.aspx"> Lista De Compras al Proveedor </a>
                                     </li>
                                     
                                 </ul>

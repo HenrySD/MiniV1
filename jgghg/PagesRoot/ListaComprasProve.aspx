@@ -1,36 +1,43 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/Root.Master" AutoEventWireup="true" CodeBehind="ListaComprasProve.aspx.cs" Inherits="jgghg.PagesRoot.ListaComprasProve" %>
+<%@ Register assembly="DevExpress.Web.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web" tagprefix="dx" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div style="margin:10% 5% 10% 5%">
         <form runat="server" >
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConflictDetection="CompareAllValues" ConnectionString='<%$ ConnectionStrings:DB_A41A57_HenrySDConnectionString %>' DeleteCommand="DELETE FROM [Compras] WHERE [CompraID] = @original_CompraID AND [PrecioUnit] = @original_PrecioUnit AND [Fecha_Compra] = @original_Fecha_Compra AND [Cantidad] = @original_Cantidad AND [ProveedorID] = @original_ProveedorID" InsertCommand="INSERT INTO [Compras] ([PrecioUnit], [Fecha_Compra], [Cantidad], [ProveedorID]) VALUES (@PrecioUnit, @Fecha_Compra, @Cantidad, @ProveedorID)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [Compras]" UpdateCommand="UPDATE [Compras] SET [PrecioUnit] = @PrecioUnit, [Fecha_Compra] = @Fecha_Compra, [Cantidad] = @Cantidad, [ProveedorID] = @ProveedorID WHERE [CompraID] = @original_CompraID AND [PrecioUnit] = @original_PrecioUnit AND [Fecha_Compra] = @original_Fecha_Compra AND [Cantidad] = @original_Cantidad AND [ProveedorID] = @original_ProveedorID">
-                <DeleteParameters>
-                    <asp:Parameter Name="original_CompraID" Type="Int32"></asp:Parameter>
-                    <asp:Parameter Name="original_PrecioUnit" Type="Int32"></asp:Parameter>
-                    <asp:Parameter DbType="Date" Name="original_Fecha_Compra"></asp:Parameter>
-                    <asp:Parameter Name="original_Cantidad" Type="Byte"></asp:Parameter>
-                    <asp:Parameter Name="original_ProveedorID" Type="Int32"></asp:Parameter>
-                </DeleteParameters>
-                <InsertParameters>
-                    <asp:Parameter Name="PrecioUnit" Type="Int32"></asp:Parameter>
-                    <asp:Parameter DbType="Date" Name="Fecha_Compra"></asp:Parameter>
-                    <asp:Parameter Name="Cantidad" Type="Byte"></asp:Parameter>
-                    <asp:Parameter Name="ProveedorID" Type="Int32"></asp:Parameter>
-                </InsertParameters>
-                <UpdateParameters>
-                    <asp:Parameter Name="PrecioUnit" Type="Int32"></asp:Parameter>
-                    <asp:Parameter DbType="Date" Name="Fecha_Compra"></asp:Parameter>
-                    <asp:Parameter Name="Cantidad" Type="Byte"></asp:Parameter>
-                    <asp:Parameter Name="ProveedorID" Type="Int32"></asp:Parameter>
-                    <asp:Parameter Name="original_CompraID" Type="Int32"></asp:Parameter>
-                    <asp:Parameter Name="original_PrecioUnit" Type="Int32"></asp:Parameter>
-                    <asp:Parameter DbType="Date" Name="original_Fecha_Compra"></asp:Parameter>
-                    <asp:Parameter Name="original_Cantidad" Type="Byte"></asp:Parameter>
-                    <asp:Parameter Name="original_ProveedorID" Type="Int32"></asp:Parameter>
-                </UpdateParameters>
+            <dx:ASPxGridView ID="ASPxGridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" KeyFieldName="CompraID" Theme="MaterialCompact">
+<SettingsAdaptivity>
+<AdaptiveDetailLayoutProperties ColCount="1"></AdaptiveDetailLayoutProperties>
+</SettingsAdaptivity>
 
-            </asp:SqlDataSource>
+                <SettingsDataSecurity AllowInsert="False" />
+
+<EditFormLayoutProperties ColCount="1"></EditFormLayoutProperties>
+                <Columns>
+                    <dx:GridViewCommandColumn ShowEditButton="True" VisibleIndex="0">
+                    </dx:GridViewCommandColumn>
+                    <dx:GridViewDataTextColumn FieldName="CompraID" ReadOnly="True" VisibleIndex="1">
+                        <EditFormSettings Visible="False" />
+                    </dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="Nombre_Producto" VisibleIndex="2">
+                    </dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="PrecioUnit" VisibleIndex="3">
+                    </dx:GridViewDataTextColumn>
+                    <dx:GridViewDataDateColumn FieldName="Fecha_Compra" VisibleIndex="4">
+                    </dx:GridViewDataDateColumn>
+                    <dx:GridViewDataTextColumn FieldName="Cantidad" VisibleIndex="5">
+                    </dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="Descuento" VisibleIndex="6">
+                    </dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="FacturaID" VisibleIndex="7">
+                    </dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="Total" VisibleIndex="8">
+                    </dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="ProveedorID" VisibleIndex="9">
+                    </dx:GridViewDataTextColumn>
+                </Columns>
+            </dx:ASPxGridView>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DB_A41A57_HenrySDConnectionString %>" SelectCommand="SELECT * FROM [Compras]"></asp:SqlDataSource>
 
 
         </form>
