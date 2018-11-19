@@ -24,13 +24,22 @@ namespace jgghg.PagesAdmin
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            con.Open();
-            string query = "insert into Proveedores(ProveedorID,Departamento,Ciudad,CodigoPostal,Telefono,Cell,Empresa,Compania)values('" + txtProveedorID.Text + "','" + txtDepa.Text + "','" + txtCiudad.Text + "','" + txtCodigoPostal.Text + "','" + txtTelefono.Text + "','" + txtCell.Text + "','" + txtEmpresa.Text + "','" + txtCompania.Text + "')";
+            try
+            {
+                con.Open();
+                string query = "insert into Proveedores(ProveedorID,Departamento,Ciudad,CodigoPostal,Telefono,Cell,Empresa,Compania)values('" + txtProveedorID.Text + "','" + txtDepa.Text + "','" + txtCiudad.Text + "','" + txtCodigoPostal.Text + "','" + txtTelefono.Text + "','" + txtCell.Text + "','" + txtEmpresa.Text + "','" + txtCompania.Text + "')";
 
-            SqlDataAdapter sda = new SqlDataAdapter(query,con);
-            sda.SelectCommand.ExecuteNonQuery();
-            con.Close();
-            Response.Write("<script>alert('Datos ingresados exitosamente');</script>");
+                SqlDataAdapter sda = new SqlDataAdapter(query, con);
+                sda.SelectCommand.ExecuteNonQuery();
+                con.Close();
+                Response.Write("<script>alert('Datos ingresados exitosamente');</script>");
+            }
+            catch (Exception)
+            {
+                Response.Write("<script>alert('Problemas con la Conexion');</script>");
+
+            }
+            
         }
     }
 }

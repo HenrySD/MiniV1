@@ -13,7 +13,11 @@ namespace jgghg.PagesRoot
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if (Session["aux"] == null)
+            {
+                Response.Redirect("../Acceder.aspx");
+                Response.End();
+            }
         }
         
       SqlConnection a = new SqlConnection("Data Source = sql7004.site4now.net; Initial Catalog = DB_A41A57_HenrySD; User ID = DB_A41A57_HenrySD_admin; Password=123456789LOPEZ");

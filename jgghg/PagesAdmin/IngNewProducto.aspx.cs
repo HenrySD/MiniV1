@@ -22,15 +22,24 @@ namespace jgghg.PagesAdmin
 
         protected void btnAgregar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                con.Open();
+                string query = ("insert into Productos(ProductoId,NameProducto,ProveedorID,CategoriaID,PrecioUnit,UnidadesStock)values('" + TextProductoID.Text + "','" + txtNombreProducto.Text + "','" + txtProveedor.Text + "','" + txtCategoria.Text + "','" + TextPrecioUnit.Text + "','" + TextExistencia.Text + "')");
 
-            con.Open();
+                SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+                SDA.SelectCommand.ExecuteNonQuery();
+                con.Close();
+                Response.Write("<script>alert('Datos guardados Exitosamente');</script>");
+            }
+            catch (Exception)
+            {
+                Response.Write("<script>alert('Problemas con la Conexion');</script>");
 
-            string query = ("insert into Productos(ProductoId,NameProducto,ProveedorID,CategoriaID,PrecioUnit,UnidadesStock)values('" + TextProductoID.Text + "','" + txtNombreProducto.Text + "','" + txtProveedor.Text + "','" + txtCategoria.Text + "','" + TextPrecioUnit.Text + "','" + TextExistencia.Text + "')");
+            }
+           
 
-            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
-            SDA.SelectCommand.ExecuteNonQuery();
-            con.Close();
-            Response.Write("<script>alert('Datos guardados Exitosamente');</script>");
+            
         }
     }
 }

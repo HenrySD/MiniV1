@@ -62,7 +62,8 @@ namespace jgghg.PagesRoot
                         else
                         {
                             Response.Write("<script>alert('Nada');</script>");
-                            break;
+                        txtEnviada.Text = "No se encontro ningun correo";
+                        break;
                         }
                     }
                 }
