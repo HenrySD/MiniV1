@@ -26,7 +26,7 @@ namespace jgghg.Pages
         {
             con.Open();
 
-             string query = ("insert into Productos(ProductoID,ProveedorID,CategoriaID,UnidadesStock,CompraID)values('"+TextProductoID.Text+ "','"  + txtProveedor.Text + "','" + txtCategoria.Text + "','"  + TextExistencia.Text + "','" +DropDownList1.Text+ "')");
+             string query ="insert into Productos(ProductoID,CategoriaID,CompraID,PrecioVenta,DateVencimiento)values('"+txtProductID.Text+ "','"  + txtCategoria.Text + "','" + txtCompra.Text + "','"  + txtPrecioVenta.Text + "','" +txtDateVencimineto.Text+ "')";
 
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             SDA.SelectCommand.ExecuteNonQuery();

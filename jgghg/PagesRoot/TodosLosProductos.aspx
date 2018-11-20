@@ -6,23 +6,25 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div style="margin:10% 0% 10% 0%">
     <form action="/" method="post" runat="server">
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString='<%$ ConnectionStrings:DB_A41A57_HenrySDConnectionString %>' SelectCommand="SELECT * FROM [Productos]">
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString='<%$ ConnectionStrings:DB_A41A57_HenrySDConnectionString %>' SelectCommand="SELECT * FROM [TodoslosProductos]">
         </asp:SqlDataSource>
-        <dx:ASPxGridView ID="ASPxGridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" KeyFieldName="ProductoID" Theme="MaterialCompact">
-<SettingsAdaptivity>
-<AdaptiveDetailLayoutProperties ColCount="1"></AdaptiveDetailLayoutProperties>
-</SettingsAdaptivity>
+        <dx:ASPxGridView ID="ASPxGridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Theme="MaterialCompact">
+            <SettingsAdaptivity>
+                <AdaptiveDetailLayoutProperties ColCount="1"></AdaptiveDetailLayoutProperties>
+            </SettingsAdaptivity>
 
             <SettingsDataSecurity AllowInsert="False"></SettingsDataSecurity>
 
-<EditFormLayoutProperties ColCount="1"></EditFormLayoutProperties>
+            <EditFormLayoutProperties ColCount="1"></EditFormLayoutProperties>
 
             <Columns>
-                <dx:GridViewDataTextColumn FieldName="ProductoID" ReadOnly="True" VisibleIndex="0"></dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="ProveedorID" VisibleIndex="1"></dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="CategoriaID" VisibleIndex="2"></dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="UnidadesStock" VisibleIndex="3"></dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="CompraID" VisibleIndex="4"></dx:GridViewDataTextColumn>
+                <dx:GridViewDataTextColumn FieldName="Id Producto" VisibleIndex="0"></dx:GridViewDataTextColumn>
+                <dx:GridViewDataTextColumn FieldName="Nombre de producto" VisibleIndex="1"></dx:GridViewDataTextColumn>
+                <dx:GridViewDataTextColumn FieldName="Precio de Compra" VisibleIndex="2"></dx:GridViewDataTextColumn>
+                <dx:GridViewDataTextColumn FieldName="Precio venta" VisibleIndex="3"></dx:GridViewDataTextColumn>
+                <dx:GridViewDataDateColumn FieldName="Fecha de Vencimiento" VisibleIndex="4"></dx:GridViewDataDateColumn>
+                <dx:GridViewDataTextColumn FieldName="Categoria" VisibleIndex="5"></dx:GridViewDataTextColumn>
+                <dx:GridViewDataTextColumn FieldName="Nombre" VisibleIndex="6"></dx:GridViewDataTextColumn>
             </Columns>
         </dx:ASPxGridView>
 
