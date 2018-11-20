@@ -110,6 +110,8 @@
     <Content Include="PagesAdmin\AgregarProveedorAdmin.aspx" />
     <Content Include="PagesAdmin\AgregarUsuariosAdmin.aspx" />
     <Content Include="PagesAdmin\IngNewProducto.aspx" />
+    <Content Include="PagesAdmin\IngresarCompras.aspx" />
+    <Content Include="PagesAdmin\RecuperarContraAbmin.aspx" />
     <Content Include="PagesAdmin\TodosLosProductos.aspx" />
     <Content Include="PagesAdmin\TodosProveedoresAdmin.aspx" />
     <Content Include="PagesEmpleado\EmpleadoHome.aspx" />
@@ -184,6 +186,20 @@
     </Compile>
     <Compile Include="PagesAdmin\IngNewProducto.aspx.designer.cs">
       <DependentUpon>IngNewProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesAdmin\IngresarCompras.aspx.cs">
+      <DependentUpon>IngresarCompras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesAdmin\IngresarCompras.aspx.designer.cs">
+      <DependentUpon>IngresarCompras.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesAdmin\RecuperarContraAbmin.aspx.cs">
+      <DependentUpon>RecuperarContraAbmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesAdmin\RecuperarContraAbmin.aspx.designer.cs">
+      <DependentUpon>RecuperarContraAbmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="PagesAdmin\TodosLosProductos.aspx.cs">
       <DependentUpon>TodosLosProductos.aspx</DependentUpon>

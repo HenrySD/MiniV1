@@ -152,7 +152,7 @@
                                         <a href="../PagesAdmin/AgregarUsuariosAdmin.aspx">Registrar Nuevo Usuario </a>
                                     </li>
                                     <li>
-                                        <a href="#">Recuperar Contraseña </a>
+                                        <a href="../PagesAdmin/RecuperarContraAbmin.aspx">Recuperar Contraseña </a>
                                     </li>
                                 </ul>
                             </li>
@@ -167,6 +167,9 @@
                                     </li>
                                     <li>
                                         <a href="../PagesAdmin/TodosLosProductos.aspx">Listado Productos </a>
+                                    </li>
+                                     <li>
+                                        <a href="../PagesAdmin/IngresarCompras.aspx">Listado Productos </a>
                                     </li>
                                     
                                 </ul>
