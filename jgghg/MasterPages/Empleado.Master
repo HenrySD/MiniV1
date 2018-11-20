@@ -134,15 +134,16 @@
                                     <li>
                                         <a href="../PagesEmpleado/RegistrarVentas.aspx">Registrar  Ventas </a>
                                     </li>
+                                    <li>
+                                        <a href="../PagesEmpleado/CajaRegistradoraEmpleado.aspx">Caja </a>
+                                    </li>
                                    
                                 </ul>
                             </li>
                             <li>
                                
                                 </ul>
-                            </li>
-                            
-                        </ul>
+                           
                     </nav>
                 </div>
 
