@@ -17,7 +17,7 @@
                 </div>
                 <div class="col-md-3 mb-3">
                     <asp:Label ID="Label3" runat="server" Text="FechaVenta"></asp:Label>
-                    <asp:TextBox ID="txtFecha" runat="server" type="date" ReadOnly="true" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtFecha" runat="server" type="date" CssClass="form-control"></asp:TextBox>
                 </div>
             </div>
 
