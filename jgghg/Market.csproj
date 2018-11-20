@@ -114,6 +114,8 @@
     <Content Include="PagesAdmin\RegistrarComprasProvee.aspx" />
     <Content Include="PagesAdmin\TodosLosProductos.aspx" />
     <Content Include="PagesAdmin\TodosProveedoresAdmin.aspx" />
+    <Content Include="PagesEmpleado\BuscarProducto.aspx" />
+    <Content Include="PagesEmpleado\CajaRegistradoraEmpleado.aspx" />
     <Content Include="PagesEmpleado\EmpleadoHome.aspx" />
     <Content Include="PagesRoot\AgregarProveedor.aspx" />
     <Content Include="PagesRoot\ListaComprasProve.aspx" />
@@ -214,6 +216,20 @@
     </Compile>
     <Compile Include="PagesAdmin\TodosProveedoresAdmin.aspx.designer.cs">
       <DependentUpon>TodosProveedoresAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesEmpleado\BuscarProducto.aspx.cs">
+      <DependentUpon>BuscarProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesEmpleado\BuscarProducto.aspx.designer.cs">
+      <DependentUpon>BuscarProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesEmpleado\CajaRegistradoraEmpleado.aspx.cs">
+      <DependentUpon>CajaRegistradoraEmpleado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesEmpleado\CajaRegistradoraEmpleado.aspx.designer.cs">
+      <DependentUpon>CajaRegistradoraEmpleado.aspx</DependentUpon>
     </Compile>
     <Compile Include="PagesEmpleado\EmpleadoHome.aspx.cs">
       <DependentUpon>EmpleadoHome.aspx</DependentUpon>
