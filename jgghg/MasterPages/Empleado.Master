@@ -137,6 +137,9 @@
                                     <li>
                                         <a href="../PagesEmpleado/CajaRegistradoraEmpleado.aspx">Caja </a>
                                     </li>
+                                    <li>
+                                        <a href="../PagesEmpleado/BuscarProducto.aspx">Buscar Producto</a>
+                                    </li>
                                    
                                 </ul>
                             </li>
