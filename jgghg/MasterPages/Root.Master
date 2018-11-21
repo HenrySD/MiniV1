@@ -122,7 +122,7 @@
                                 <a href="../PagesRoot/RootHome.aspx">
                                     <i class="fa fa-home"></i>Inicio </a>
                             </li>
-                            <li>
+                           <%-- <li>
                                 <a href="#">
                                     <i class="fa fa-th-large"></i>Consultas
                                         <i class="fa arrow"></i>
@@ -142,7 +142,7 @@
                                     </li>
                                    
                                 </ul>
-                            </li>
+                            </li>--%>
                             <li>
                                 <a href="#">
                                     <i class="fa fa-area-chart"></i>Usuarios
@@ -175,7 +175,7 @@
                                   
                                   
                                      <li>
-                                        <a href="../PagesRoot/RegistrarDetallesDeCompra.aspx"> Ingresar la compra que se realizo al proveedor</a>
+                                        <a href="../PagesRoot/RegistrarDetallesDeCompra.aspx">Agregar compra</a>
                                     </li>
                                      <li>
                                         <a href="../PagesRoot/ListaComprasProve.aspx"> Lista De Compras al Proveedor </a>
