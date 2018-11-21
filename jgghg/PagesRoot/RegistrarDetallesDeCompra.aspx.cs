@@ -44,6 +44,25 @@ namespace jgghg.PagesRoot
             
 
         }
+
+        protected void Calcular_Click(object sender, EventArgs e)
+        {
+            double a, b, c, d, f, g;
+            b = double.Parse(TextProcioUnit.Text);
+            c = double.Parse(TextCantidad.Text);
+            d = double.Parse(txtDescuento.Text);
+
+            g = d / 100;
+            a = b * c;
+            f = a - g;
+
+            txtTotal.Text = Convert.ToString(f);
+        }
+
+        protected void txtTotal_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

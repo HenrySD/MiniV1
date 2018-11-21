@@ -46,7 +46,8 @@
                 <div class="col-md-4 mb-3">
                     &nbsp;<asp:Label ID="Label6" runat="server" Text="Total"></asp:Label>
                     &nbsp;
-                            <asp:TextBox ID="txtTotal" runat="server" CssClass="form-control" placeholder="Total de la compra" required="" value=""></asp:TextBox>
+                            <asp:TextBox ID="txtTotal" runat="server" CssClass="form-control" placeholder="Total de la compra" required="" value="" ReadOnly="True"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="precionar el boton calcular primero" ControlToValidate="txtTotal" ValidationGroup="total"></asp:RequiredFieldValidator>
                 </div>
             </div>
             <div class="row">
@@ -66,7 +67,9 @@
             </div>
 
 
-            <asp:Button ID="btnAgregar" runat="server" Text="Agregar" CssClass="btn btn-dark mt-3 " OnClick="btnAgregar_Click" />
+            <asp:Button ID="btnAgregar" runat="server" Text="Agregar" CssClass="btn btn-dark mt-3" OnClick="btnAgregar_Click" ValidationGroup="total" />
+
+            &nbsp;<asp:Button ID="Button1" runat="server" CssClass="btn btn-dark mt-3" Text="Calcular total" OnClick="Button1_Click" />
 
             <br />
             <br />

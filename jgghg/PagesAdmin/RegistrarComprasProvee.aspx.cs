@@ -37,9 +37,20 @@ namespace jgghg.PagesAdmin
 
                 Response.Write("<script>alert('Por favor Reincie el formulario');</script>");
             }
+        }
 
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            double a, b, c, d, f, g;
+            b = double.Parse(TextProcioUnit.Text);
+            c = double.Parse(TextCantidad.Text);
+            d = double.Parse(txtDescuento.Text);
 
+            g = d / 100;
+            a = b * c;
+            f = a - g;
 
+            txtTotal.Text = Convert.ToString(f);
         }
     }
     }
